@@ -14,40 +14,33 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('frontend.layouts.app');
+    return view('frontend.pages.home');
 });
 
-// Menu Profil Routes
-Route::get('/profil', function () {
-    return view('frontend.Profil.index');
+Route::get('/profile', function () {
+    return view('frontend.pages.Profile.index');
 });
 
-Route::get('/visi-misi', function () {
-    return view('frontend.Profil.visi');
+Route::get('/profile/visi-misi', function () {
+    return view('frontend.pages.Profile.visi-misi');
 });
 
-Route::get('/tupoksi', function () {
-    return view('frontend.Profil.tupoksi');
+Route::get('/profile/tupoksi', function () {
+    return view('frontend.pages.Profile.tupoksi');
 });
 
-Route::get('/struktur-organisasi', function () {
-    return view('frontend.Profil.struktur-organisasi');
+Route::get('/profile/struktur-organisasi', function () {
+    return view('frontend.pages.Profile.struktur-organisasi');
 });
 
-Route::get('/geografi', function () {
-    return view('frontend.Profil.geografi');
+Route::get('/profile/kondisi-geografi', function () {
+    return view('frontend.pages.Profile.geografi');
 });
 
-Route::get('/demografi', function () {
-    return view('frontend.Profil.demografi');
+Route::get('/profile/kondisi-demografi', function () {
+    return view('frontend.pages.Profile.demografi');
 });
 
-Route::get('/organisasi-kemasyarakatan', function () {
-    return view('frontend.Profil.organisasi-kemasyarakatan');
+Route::get('/profile/organisasi-kemasyarakatan', function () {
+    return view('frontend.pages.Profile.organisasi-kemasyarakatan');
 });
-// End Profil Routes
-
-// Menu Informasi Publik Routes
-
-// End Informasi Publik Routes
-

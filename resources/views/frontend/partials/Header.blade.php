@@ -11,17 +11,17 @@
         <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
         <nav id="navbar" class="navbar">
             <ul>
-                <li><a href="/" class="active">Beranda</a></li>
-                <li class="dropdown"><a href="#"><span>Profil</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                <li><a href="/">Beranda</a></li>
+                <li class="dropdown"><a href="/profile"><span>Profil</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
                     <ul>
-                        <li><a href="#">Visi Misi</a></li>
-                        <li><a href="#">Tupoksi</a></li>
-                        <li><a href="#">Struktur Organisasi</a></li>
-                        <li><a href="#">Kondisi Geografi</a></li>
+                        <li><a href="/profile/visi-misi">Visi Misi</a></li>
+                        <li><a href="/profile/tupoksi">Tupoksi</a></li>
+                        <li><a href="/profile/struktur-organisasi">Struktur Organisasi</a></li>
+                        <li><a href="/profile/kondisi-geografi">Kondisi Geografi</a></li>
                         <li class="dropdown"><a href="#"><span>Data Wilayah</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
                             <ul>
-                                <li><a href="#">Kondisi Demografi</a></li>
-                                <li><a href="#">Organisasi Kemasyarakatan</a></li>
+                                <li><a href="/profile/kondisi-demografi">Kondisi Demografi</a></li>
+                                <li><a href="/profile/organisasi-kemasyarakatan">Organisasi Kemasyarakatan</a></li>
                             </ul>
                         </li>
                     </ul>

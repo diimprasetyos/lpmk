@@ -45,7 +45,7 @@
     @include('frontend.partials.Header')
     <div id="app">
         <!-- ======= Hero Section ======= -->
-        @include('frontend.partials.Hero')
+        @yield('hero')
         <!-- End Hero Section -->
 
         <!-- #main -->
