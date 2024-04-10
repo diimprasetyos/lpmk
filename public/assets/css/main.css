@@ -1946,6 +1946,24 @@ section {
   color: #fff;
   border: 2px solid var(--color-primary);
 }
+.btn-login-custom {
+  font-family: var(--font-primary);
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 12px 25px !important;
+  border-radius: 50px !important ;
+  transition: 0.5s;
+  margin-left: 25px !important;
+  margin: 10px;
+  color: #fff;
+  background: var(--color-primary);
+  -webkit-border-radius: 50px !important ;
+  -moz-border-radius: 50px !important ;
+  -ms-border-radius: 50px !important ;
+  -o-border-radius: 50px !important ;
+}
 
 .hero .info .btn-get-started:hover {
   background: var(--color-primary);

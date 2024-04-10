@@ -13,10 +13,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// Frontend Routes
+
+// Beranda
 Route::get('/', function () {
     return view('frontend.pages.home');
 });
 
+// Profile
 Route::get('/profile', function () {
     return view('frontend.pages.Profile.index');
 });
@@ -44,3 +48,32 @@ Route::get('/profile/kondisi-demografi', function () {
 Route::get('/profile/organisasi-kemasyarakatan', function () {
     return view('frontend.pages.Profile.organisasi-kemasyarakatan');
 });
+
+// Informasi Layanan 
+Route::get('/layanan/informasi-layanan', function () {
+    return view('frontend.pages.Layanan.info-layanan');
+});
+
+Route::get('/layanan/pengaduan', function () {
+    return view('frontend.pages.Layanan.pengaduan');
+});
+
+Route::get('/layanan/staff', function () {
+    return view('frontend.pages.Layanan.staff');
+});
+
+Route::get('/layanan/cek-bantuan', function () {
+    return view('frontend.pages.Layanan.bantuan');
+});
+
+// Berita 
+Route::get('/berita', function () {
+    return view('frontend.pages.berita');
+});
+
+// Kontak & Pengaduan
+Route::get('/kontak', function () {
+    return view('frontend.pages.kontak');
+});
+
+// End Frontend Routes
