@@ -77,3 +77,17 @@ Route::get('/kontak', function () {
 });
 
 // End Frontend Routes
+
+// Admin Routes
+
+// Admin 
+Route::get('/admin', function () {
+    return view('admin-dashboard.pages.dashboard-v1');
+})->name('admin-dashboard-v1');
+
+// Data
+Route::get('/admin/data', function () {
+    return view('admin-dashboard.pages.data');
+})->name('admin-data');
+
+// End Admin Routes

@@ -4,6 +4,15 @@
  * Author: BootstrapMade.com
  * License: https://bootstrapmade.com/license/
  */
+$('[data-bs-toggle="collapse"]').click(function () {
+    var icon = $(this).find("i");
+    if ($(this).attr("aria-expanded") === "false") {
+        icon.removeClass("fas fa-minus").addClass("fas fa-plus");
+    } else {
+        icon.removeClass("fas fa-plus").addClass("fas fa-minus");
+    }
+});
+
 document.addEventListener("DOMContentLoaded", () => {
     "use strict";
     /**
