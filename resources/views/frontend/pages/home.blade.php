@@ -9,7 +9,7 @@
                 <div class="col-lg-6 text-center">
                     <h2 data-aos="fade-down">Selamat Datang di <br><span>LPMK Tanjungrejo</span></h2>
                     <p data-aos="fade-up">Lembaga Pemberdayaan Masyarakat Kelurahan (LPMK) adalah lembaga atau wadah yang dibentuk berdasarkan prakarsa masyarakat yang difasilitasi pemerintah melalui musyarawah mufakat sebagai mitra kelurahan dalam menampung dan mewujudkan aspirasi serta kebutuhan masyarakat di bidang pembangunan.</p>
-                    <a data-aos="fade-up" data-aos-delay="200" href="#get-started" class="btn-get-started">Get Started</a>
+                    <a data-aos="fade-up" data-aos-delay="200" href="/kontak" class="btn-get-started">Hubungi Kami</a>
                 </div>
             </div>
         </div>
@@ -43,8 +43,8 @@
     <section id="recent-blog-posts" class="recent-blog-posts">
         <div class="container" data-aos="fade-up"">
                 <div class=" section-header">
-            <h2>Recent Blog Posts</h2>
-            <p>In commodi voluptatem excepturi quaerat nihil error autem voluptate ut et officia consequuntu</p>
+            <h2>Berita Terbaru</h2>
+            <p>Berita seputar kegiatan yang telah dilakukan oleh LPMK Tanjungrejo</p>
         </div>
 
         <div class="row gy-5">
