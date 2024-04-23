@@ -19,105 +19,32 @@
     <div class="container" data-aos="fade-up">
 
         <div class="row justify-content-around gy-4">
-            <div class="col-lg-6 img-bg" style="background-image: url(/assets/img/alt-services.jpg);" data-aos="zoom-in" data-aos-delay="100"></div>
+            <div class="col-lg-6 img-bg" data-aos="zoom-in" data-aos-delay="100">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7902.209946701309!2d112.612542!3d-7.9880949999999995!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7882a3943991e5%3A0xc2f6a01db8859b26!2sKantor%20Kelurahan%20Tanjungrejo!5e0!3m2!1sen!2sus!4v1713792489480!5m2!1sen!2sus" width="600" height="650" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
 
-            <div class="col-lg-5 d-flex flex-column justify-content-center">
-                <h3>Enim quis est voluptatibus aliquid consequatur fugiat</h3>
-                <p>Esse voluptas cumque vel exercitationem. Reiciendis est hic accusamus. Non ipsam et sed minima temporibus
-                    laudantium. Soluta voluptate sed facere corporis dolores excepturi</p>
-
-                <div class="icon-box d-flex position-relative" data-aos="fade-up" data-aos-delay="100">
-                    <i class="bi bi-easel flex-shrink-0"></i>
-                    <div>
-                        <h4><a href="" class="stretched-link">Lorem Ipsum</a></h4>
-                        <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate
-                            non provident</p>
-                    </div>
-                </div><!-- End Icon Box -->
-
-                <div class="icon-box d-flex position-relative" data-aos="fade-up" data-aos-delay="200">
-                    <i class="bi bi-patch-check flex-shrink-0"></i>
-                    <div>
-                        <h4><a href="" class="stretched-link">Nemo Enim</a></h4>
-                        <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum
-                            deleniti atque</p>
-                    </div>
-                </div><!-- End Icon Box -->
-
-                <div class="icon-box d-flex position-relative" data-aos="fade-up" data-aos-delay="300">
-                    <i class="bi bi-brightness-high flex-shrink-0"></i>
-                    <div>
-                        <h4><a href="" class="stretched-link">Dine Pad</a></h4>
-                        <p>Explicabo est voluptatum asperiores consequatur magnam. Et veritatis odit. Sunt aut deserunt minus
-                            aut eligendi omnis</p>
-                    </div>
-                </div><!-- End Icon Box -->
-
-                <div class="icon-box d-flex position-relative" data-aos="fade-up" data-aos-delay="400">
-                    <i class="bi bi-brightness-high flex-shrink-0"></i>
-                    <div>
-                        <h4><a href="" class="stretched-link">Tride clov</a></h4>
-                        <p>Est voluptatem labore deleniti quis a delectus et. Saepe dolorem libero sit non aspernatur odit amet.
-                            Et eligendi</p>
-                    </div>
-                </div><!-- End Icon Box -->
+            <div class="col-lg-5 d-flex flex-column justify-content-center mb-auto">
+                <h3>Kelurahan Tanjungrejo memiliki kondisi geografis sebagai berikut</h3>
+                <p>112,34” – 1141,34” BT – 7,54’52” – 8,03’05” LS</p>
+                <p>Kelurahan Tanjungrejo Kecamatan Sukun memiliki ketinggian rata-rata 440-660 m dari permukaan air laut, dengan batas:</p>
+                <p>Disebelah Utara : Kelurahan Bareng</p>
+                <p>Disebelah Selatan : Kelurahan Bandungrejosari</p>
+                <p>Disebelah Timur : Kelurahan Sukun</p>
+                <p>Disebelah Barat : Kelurahan Bandulan</p>
+                <p>Dan Memiliki Topologi : </p>
+                <ol>
+                    <li>Persawahan</li>
+                    <li>Perladangan</li>
+                    <li>Perkebunan</li>
+                    <li>Peternakan</li>
+                    <li>Kerajinan dan Industri Kecil</li>
+                    <li>Industri sedang dan besar</li>
+                    <li>Jasa dan Perdagangan</li>
+                </ol>
 
             </div>
         </div>
 
     </div>
 </section><!-- End Alt Services Section -->
-
-<!-- ======= Alt Services Section 2 ======= -->
-<section id="alt-services-2" class="alt-services section-bg">
-    <div class="container" data-aos="fade-up">
-
-        <div class="row justify-content-around gy-4">
-            <div class="col-lg-5 d-flex flex-column justify-content-center">
-                <h3>Non quasi officia eum nobis et rerum epudiandae rem voluptatem</h3>
-                <p>Maxime quia dolorum alias perspiciatis. Earum voluptatem sint at non. Ducimus maxime minima iste magni
-                    sit praesentium assumenda minus. Amet rerum saepe tempora vero.</p>
-
-                <div class="icon-box d-flex position-relative" data-aos="fade-up" data-aos-delay="100">
-                    <i class="bi bi-easel flex-shrink-0"></i>
-                    <div>
-                        <h4><a href="" class="stretched-link">Lorem Ipsum</a></h4>
-                        <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate
-                            non provident</p>
-                    </div>
-                </div><!-- End Icon Box -->
-
-                <div class="icon-box d-flex position-relative" data-aos="fade-up" data-aos-delay="200">
-                    <i class="bi bi-patch-check flex-shrink-0"></i>
-                    <div>
-                        <h4><a href="" class="stretched-link">Nemo Enim</a></h4>
-                        <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum
-                            deleniti atque</p>
-                    </div>
-                </div><!-- End Icon Box -->
-
-                <div class="icon-box d-flex position-relative" data-aos="fade-up" data-aos-delay="300">
-                    <i class="bi bi-brightness-high flex-shrink-0"></i>
-                    <div>
-                        <h4><a href="" class="stretched-link">Dine Pad</a></h4>
-                        <p>Explicabo est voluptatum asperiores consequatur magnam. Et veritatis odit. Sunt aut deserunt minus
-                            aut eligendi omnis</p>
-                    </div>
-                </div><!-- End Icon Box -->
-
-                <div class="icon-box d-flex position-relative" data-aos="fade-up" data-aos-delay="400">
-                    <i class="bi bi-brightness-high flex-shrink-0"></i>
-                    <div>
-                        <h4><a href="" class="stretched-link">Tride clov</a></h4>
-                        <p>Est voluptatem labore deleniti quis a delectus et. Saepe dolorem libero sit non aspernatur odit amet.
-                            Et eligendi</p>
-                    </div>
-                </div><!-- End Icon Box -->
-            </div>
-
-            <div class="col-lg-6 img-bg" style="background-image: url(/assets/img/alt-services-2.jpg);" data-aos="zoom-in" data-aos-delay="100"></div>
-        </div>
-
-    </div>
-</section><!-- End Alt Services Section 2 -->
 @endsection
