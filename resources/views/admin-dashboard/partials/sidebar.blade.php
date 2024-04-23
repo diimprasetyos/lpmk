@@ -35,7 +35,7 @@
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
                             <a href="/admin"
-                                class="nav-link {{ Route::currentRouteName() == 'admin-dashboard-v1' ? 'active' : '' }}">
+                                class="nav-link {{ Route::currentRouteName() == 'admin-home' ? 'active' : '' }}">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Active Page</p>
                             </a>

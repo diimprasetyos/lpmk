@@ -29,7 +29,12 @@
                                 <h3 class="card-title">DataTable with default features</h3>
                             </div>
                             <!-- /.card-header -->
+
                             <div class="card-body">
+                                <div class="mb-2 w-50">
+                                    <div class="btn btn-primary btn-sm btn-flat">Create</div>
+                                    <div class="btn btn-default btn-sm btn-flat">Print</div>
+                                </div>
                                 <table id="example1" class="table table-bordered table-striped">
                                     <thead>
                                         <tr>
