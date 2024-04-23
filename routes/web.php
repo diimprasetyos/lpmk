@@ -78,12 +78,36 @@ Route::get('/kontak', function () {
 
 // End Frontend Routes
 
+// Auth Routes
+
+// Login
+Route::get('/login', function () {
+    return view('auth.pages.login');
+});
+
+// Register
+Route::get('/register', function () {
+    return view('auth.pages.register');
+})->name('register');
+
+// Recover Password
+Route::get('/recover-password', function () {
+    return view('auth.pages.recover-password');
+});
+
+// Forgot Password
+Route::get('/forgot-password', function () {
+    return view('auth.pages.forgot-password');
+});
+
+// End Auth Routes
+
 // Admin Routes
 
 // Admin 
 Route::get('/admin', function () {
-    return view('admin-dashboard.pages.dashboard-v1');
-})->name('admin-dashboard-v1');
+    return view('admin-dashboard.pages.home');
+})->name('admin-home');
 
 // Data
 Route::get('/admin/data', function () {
