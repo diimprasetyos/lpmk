@@ -8,8 +8,8 @@
             <div class="row justify-content-center">
                 <div class="col-lg-6 text-center">
                     <h2 data-aos="fade-down">Selamat Datang di <span>LPMK Tanjungrejo</span></h2>
-                    <p data-aos="fade-up">Sistem Informasi LPMK (Lembaga Pemberdayaan Masyarakat Kelurahan) adalah sebuah aplikasi yang dirancang untuk membantu pengelolaan data dan informasi yang berkaitan dengan kegiatan pemberdayaan masyarakat di tingkat kelurahan.</p>
-                    <a data-aos="fade-up" data-aos-delay="200" href="#get-started" class="btn-get-started">Get Started</a>
+                    <p data-aos="fade-up">Lembaga Pemberdayaan Masyarakat Kelurahan (LPMK) adalah lembaga atau wadah yang dibentuk berdasarkan prakarsa masyarakat yang difasilitasi pemerintah melalui musyarawah mufakat sebagai mitra kelurahan dalam menampung dan mewujudkan aspirasi serta kebutuhan masyarakat di bidang pembangunan.</p>
+                    <a data-aos="fade-up" data-aos-delay="200" href="#recent-blog-posts" class="btn-get-started">Get Started</a>
                 </div>
             </div>
         </div>
