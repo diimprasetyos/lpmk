@@ -1,5 +1,9 @@
 @extends('admin-dashboard.layouts.master')
 
+@section('title')
+    Dashboard
+@endsection
+
 @section('content')
     <!-- Content Header (Page header) -->
     <div class="content-header">
@@ -11,7 +15,7 @@
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
                         <li class="breadcrumb-item"><a href="/admin">Home</a></li>
-                        <li class="breadcrumb-item active">Dashboard v1</li>
+                        <li class="breadcrumb-item active">Dashboard</li>
                     </ol>
                 </div><!-- /.col -->
             </div><!-- /.row -->

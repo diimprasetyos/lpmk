@@ -4,7 +4,7 @@
     <div class="login-box">
         <div class="card card-outline card-primary">
             <div class="card-header text-center">
-                <a href="../../index2.html" class="h1"><b>SI</b>-LPMK</a>
+                <a href="/" class="h1"><b>SI</b>-LPMK</a>
             </div>
             <div class="card-body">
                 <p class="login-box-msg">You are only one step a way from your new password, recover your password now.</p>
