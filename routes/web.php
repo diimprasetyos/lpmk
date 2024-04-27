@@ -110,8 +110,14 @@ Route::get('/admin', function () {
 })->name('admin-home');
 
 // Data
-Route::get('/admin/data', function () {
-    return view('admin-dashboard.pages.data');
-})->name('admin-data');
+
+// Data Advokasi Kebijakan
+// CRUD - Data Advokasi Kebijakan
+Route::get('admin/advokasi-kebijakan', [App\Http\Controllers\AdvokasiKebijakanController::class, 'index'])->name('advokasi-kebijakan');
+Route::get('admin/advokasi-kebijakan/create', [App\Http\Controllers\AdvokasiKebijakanController::class, 'create'])->name('advokasi-kebijakan');
+Route::post('admin/advokasi-kebijakan/create', [App\Http\Controllers\AdvokasiKebijakanController::class, 'store']);
+Route::get('admin/advokasi-kebijakan/{id}/edit', [App\Http\Controllers\AdvokasiKebijakanController::class, 'edit']);
+Route::put('admin/advokasi-kebijakan/{id}/edit', [App\Http\Controllers\AdvokasiKebijakanController::class, 'update']);
+Route::get('admin/advokasi-kebijakan/{id}/delete', [App\Http\Controllers\AdvokasiKebijakanController::class, 'destroy']);
 
 // End Admin Routes
