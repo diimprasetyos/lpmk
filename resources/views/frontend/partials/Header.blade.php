@@ -54,7 +54,7 @@
                 </li>
                 <li><a href="/berita">Berita</a></li>
                 <li><a href="/kontak">Kontak & Pengaduan</a></li>
-                <a href="login" class="ml-4 btn-login-custom">Login</a>
+                <a href="/login" class="ml-4 btn-login-custom">Login</a>
             </ul>
         </nav><!-- .navbar -->
     </div>
