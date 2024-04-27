@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Barryvdh\DomPDF\Facade\Pdf;
 use Illuminate\Http\Request;
 use App\Models\AdvokasiKebijakan;
 
@@ -22,8 +23,8 @@ class AdvokasiKebijakanController extends Controller
     {
         $request->validate([
             'kebijakan_didukung' => 'required|max:255|string',
-            'strategi_advokasi' => 'string',
-            'pihak_terkait' => 'string'
+            'strategi_advokasi' => 'nullable|string',
+            'pihak_terkait' => 'nullable|string'
         ]);
 
         AdvokasiKebijakan::create([
@@ -45,8 +46,8 @@ class AdvokasiKebijakanController extends Controller
     {
         $request->validate([
             'kebijakan_didukung' => 'required|max:255|string',
-            'strategi_advokasi' => 'string',
-            'pihak_terkait' => 'string'
+            'strategi_advokasi' => 'nullable|string',
+            'pihak_terkait' => 'nullable|string'
         ]);
 
         AdvokasiKebijakan::findOrFail($id)->update([
@@ -64,5 +65,18 @@ class AdvokasiKebijakanController extends Controller
         $advokasiKebijakan->delete();
 
         return redirect('admin/advokasi-kebijakan')->with('status', 'Advokasi Kebijakan Berhasil Dihapus');
+    }
+
+    public function print()
+    {
+        $advokasiKebijakan = AdvokasiKebijakan::get();
+        $data = [
+            'title' => 'Data Advokasi Kebijakan',
+            'date' => date('m/d/Y'),
+            'advokasiKebijakan' => $advokasiKebijakan
+        ];
+
+        $pdf = Pdf::loadView('admin-dashboard.pages.advokasi-kebijakan.print', $data);
+        return $pdf->stream();
     }
 }

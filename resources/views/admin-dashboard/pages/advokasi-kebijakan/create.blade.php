@@ -51,11 +51,12 @@
                             </div>
                             <div class="form-group">
                                 <label>Strategi Advokasi</label>
-                                <textarea name="strategi_advokasi" class="form-control" rows="3" placeholder="Masukkan Strategi Advokasi">{{ old('strategi_advokasi') }}</textarea>
+                                <textarea name="strategi_advokasi" class="form-control" rows="3"
+                                    placeholder="Masukkan Strategi Advokasi (opsional)">{{ old('strategi_advokasi') }}</textarea>
                             </div>
                             <div class="form-group">
                                 <label>Pihak Terkait</label>
-                                <textarea name="pihak_terkait" class="form-control" rows="3" placeholder="Masukkan Pihak Terkait">{{ old('pihak_terkait') }}</textarea>
+                                <textarea name="pihak_terkait" class="form-control" rows="3" placeholder="Masukkan Pihak Terkait (opsional)">{{ old('pihak_terkait') }}</textarea>
                             </div>
                         </div>
                         <!-- /.card-body -->

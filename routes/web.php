@@ -119,5 +119,6 @@ Route::post('admin/advokasi-kebijakan/create', [App\Http\Controllers\AdvokasiKeb
 Route::get('admin/advokasi-kebijakan/{id}/edit', [App\Http\Controllers\AdvokasiKebijakanController::class, 'edit']);
 Route::put('admin/advokasi-kebijakan/{id}/edit', [App\Http\Controllers\AdvokasiKebijakanController::class, 'update']);
 Route::get('admin/advokasi-kebijakan/{id}/delete', [App\Http\Controllers\AdvokasiKebijakanController::class, 'destroy']);
+Route::get('admin/advokasi-kebijakan/print', [App\Http\Controllers\AdvokasiKebijakanController::class, 'print']);
 
 // End Admin Routes
