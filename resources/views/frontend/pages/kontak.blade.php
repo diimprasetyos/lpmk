@@ -21,7 +21,7 @@
             <div class="col-lg-6">
                 <div class="info-item  d-flex flex-column justify-content-center align-items-center text-center">
                     <i class="bi bi-map"></i>
-                    <h3>Our Address</h3>
+                    <h3>Alamat</h3>
                     <p>Jln. Terusan Mergan Raya No. 1 Kelurahan Tanjungrejo Kecamatan Sukun Kota Malang</p>
                 </div>
             </div><!-- End Info Item -->
@@ -29,7 +29,7 @@
             <div class="col-lg-3 col-md-6">
                 <div class="info-item d-flex flex-column justify-content-center align-items-center">
                     <i class="bi bi-envelope"></i>
-                    <h3>Email Us</h3>
+                    <h3>Alamat E-mail</h3>
                     <p>kel-tanjungrejo@malangkota.go.id</p>
                 </div>
             </div><!-- End Info Item -->
@@ -37,7 +37,7 @@
             <div class="col-lg-3 col-md-6">
                 <div class="info-item  d-flex flex-column justify-content-center align-items-center">
                     <i class="bi bi-telephone"></i>
-                    <h3>Call Us</h3>
+                    <h3>Hubungi Kami</h3>
                     <p>(0341) 327395</p>
                 </div>
             </div><!-- End Info Item -->
