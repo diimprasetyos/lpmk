@@ -120,4 +120,13 @@ Route::get('admin/advokasi-kebijakan/{id}/edit', [App\Http\Controllers\AdvokasiK
 Route::put('admin/advokasi-kebijakan/{id}/edit', [App\Http\Controllers\AdvokasiKebijakanController::class, 'update']);
 Route::get('admin/advokasi-kebijakan/{id}/delete', [App\Http\Controllers\AdvokasiKebijakanController::class, 'destroy']);
 
+// Data Program Aspirasi
+// CRUD - Data Program Aspirasi
+Route::get('admin/program-aspirasi', [App\Http\Controllers\ProgramAspirasiController::class, 'index'])->name('program-aspirasi');
+Route::get('admin/program-aspirasi/create', [App\Http\Controllers\ProgramAspirasiController::class, 'create'])->name('program-aspirasi');
+Route::post('admin/program-aspirasi/create', [App\Http\Controllers\ProgramAspirasiController::class, 'store']);
+Route::get('admin/program-aspirasi/{id}/edit', [App\Http\Controllers\ProgramAspirasiController::class, 'edit']);
+Route::put('admin/program-aspirasi/{id}/edit', [App\Http\Controllers\ProgramAspirasiController::class, 'update']);
+Route::get('admin/program-aspirasi/{id}/delete', [App\Http\Controllers\ProgramAspirasiController::class, 'destroy']);
+
 // End Admin Routes

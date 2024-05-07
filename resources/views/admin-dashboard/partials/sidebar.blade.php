@@ -70,6 +70,15 @@
                         </li>
                     </ul>
                 </li>
+                <li class="nav-item">
+                    <a href="{{ url('/admin/program-aspirasi') }}"
+                        class="nav-link {{ Route::currentRouteName() == 'program-aspirasi' ? 'active' : '' }}">
+                        <i class="far fa-circle nav-icon"></i>
+                        <p>
+                            Program Aspirasi
+                        </p>
+                    </a>
+                </li>
             </ul>
         </nav>
         <!-- /.sidebar-menu -->
