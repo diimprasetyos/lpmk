@@ -69,9 +69,9 @@
                                                 <td>{{ $item->detailProgramAspirasi->deskripsi }}</td>
                                                 <td>{{ $item->perantara }}</td>
                                                 <td>
-                                                    <a href="{{ url('/admin/advokasi-kebijakan/' . $item->id . '/edit') }}"
+                                                    <a href="{{ url('/admin/program-aspirasi/' . $item->id . '/edit') }}"
                                                         class="btn btn-warning btn-sm mx-2 my-1">Edit</a>
-                                                    <a href="{{ url('/admin/advokasi-kebijakan/' . $item->id . '/delete') }}"
+                                                    <a href="{{ url('/admin/program-aspirasi/' . $item->id . '/delete') }}"
                                                         class="btn btn-danger btn-sm mx-2 my-1"
                                                         onclick="return confirm('Apakah anda yakin?')">Delete</a>
                                                 </td>
