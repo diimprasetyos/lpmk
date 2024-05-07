@@ -15,8 +15,8 @@ return new class extends Migration
             $table->id();
             $table->string('perantara');
             $table->enum('status', ['accepted', 'rejected', 'pending']);
-            $table->unsignedBigInteger('detail-program_aspirasi_id');
-            $table->foreign('detail-program_aspirasi_id')->references('id')->on('detail_program_aspirasi');
+            $table->unsignedBigInteger('detail_program_aspirasi_id');
+            $table->foreign('detail_program_aspirasi_id')->references('id')->on('detail_program_aspirasi');
             $table->timestamps();
         });
     }
