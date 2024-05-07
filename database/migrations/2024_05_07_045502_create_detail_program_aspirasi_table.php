@@ -11,12 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('program_aspirasi', function (Blueprint $table) {
+        Schema::create('detail_program_aspirasi', function (Blueprint $table) {
             $table->id();
-            $table->string('perantara');
-            $table->enum('status', ['accepted', 'rejected', 'pending']);
-            $table->unsignedBigInteger('detail-program_aspirasi_id');
-            $table->foreign('detail-program_aspirasi_id')->references('id')->on('detail_program_aspirasi');
+            $table->string('title');
+            $table->string('prioritas');
+            $table->integer('rt');
+            $table->integer('rw');
+            $table->text('deskripsi');
             $table->timestamps();
         });
     }
@@ -26,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('program_aspirasi');
+        Schema::dropIfExists('detail_program_aspirasi');
     }
 };

@@ -9,8 +9,10 @@ class ProgramAspirasi extends Model
 {
     use HasFactory;
     protected $table = 'program_aspirasi';
-    protected $fillable = ['prioritas', 'rt', 'rw', 'deskripsi', 'file', 'perantara'];
-    protected $cast = [
-        'prioritas' => 'string',
-    ];
+    protected $fillable = ['perantara', 'status', 'detail_program_aspirasi_id'];
+
+    public function detailProgramAspirasi()
+    {
+        return $this->belongsTo(DetailProgramAspirasi::class);
+    }
 }
