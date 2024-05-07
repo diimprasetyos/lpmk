@@ -13,10 +13,12 @@ return new class extends Migration
     {
         Schema::create('program_aspirasi', function (Blueprint $table) {
             $table->id();
-            $table->string('prioritas');
+            $table->enum('prioritas', ['P1', 'P2', 'P3']);
             $table->integer('rt');
             $table->integer('rw');
             $table->text('deskripsi');
+            $table->string('file');
+            $table->string('perantara');
             $table->timestamps();
         });
     }
