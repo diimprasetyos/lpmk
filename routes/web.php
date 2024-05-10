@@ -111,7 +111,6 @@ Route::get('/admin', function () {
 
 // Data
 
-// Data Advokasi Kebijakan
 // CRUD - Data Advokasi Kebijakan
 Route::get('admin/advokasi-kebijakan', [App\Http\Controllers\AdvokasiKebijakanController::class, 'index'])->name('advokasi-kebijakan');
 Route::get('admin/advokasi-kebijakan/create', [App\Http\Controllers\AdvokasiKebijakanController::class, 'create'])->name('advokasi-kebijakan');
@@ -120,7 +119,6 @@ Route::get('admin/advokasi-kebijakan/{id}/edit', [App\Http\Controllers\AdvokasiK
 Route::put('admin/advokasi-kebijakan/{id}/edit', [App\Http\Controllers\AdvokasiKebijakanController::class, 'update']);
 Route::get('admin/advokasi-kebijakan/{id}/delete', [App\Http\Controllers\AdvokasiKebijakanController::class, 'destroy']);
 
-// Data Program Aspirasi
 // CRUD - Data Program Aspirasi
 Route::get('admin/program-aspirasi', [App\Http\Controllers\ProgramAspirasiController::class, 'index'])->name('program-aspirasi');
 Route::get('admin/program-aspirasi/create', [App\Http\Controllers\ProgramAspirasiController::class, 'create'])->name('program-aspirasi');
@@ -128,5 +126,29 @@ Route::post('admin/program-aspirasi/create', [App\Http\Controllers\ProgramAspira
 Route::get('admin/program-aspirasi/{id}/edit', [App\Http\Controllers\ProgramAspirasiController::class, 'edit']);
 Route::put('admin/program-aspirasi/{id}/edit', [App\Http\Controllers\ProgramAspirasiController::class, 'update']);
 Route::get('admin/program-aspirasi/{id}/delete', [App\Http\Controllers\ProgramAspirasiController::class, 'destroy']);
+
+// CRUD - Data Program Perawatan
+Route::get('admin/program-perawatan', [App\Http\Controllers\ProgramPerawatanController::class, 'index'])->name('program-perawatan');
+Route::get('admin/program-perawatan/create', [App\Http\Controllers\ProgramPerawatanController::class, 'create'])->name('program-perawatan');
+Route::post('admin/program-perawatan/create', [App\Http\Controllers\ProgramPerawatanController::class, 'store']);
+Route::get('admin/program-perawatan/{id}/edit', [App\Http\Controllers\ProgramPerawatanController::class, 'edit']);
+Route::put('admin/program-perawatan/{id}/edit', [App\Http\Controllers\ProgramPerawatanController::class, 'update']);
+Route::get('admin/program-perawatan/{id}/delete', [App\Http\Controllers\ProgramPerawatanController::class, 'destroy']);
+
+// CRUD - Data Program Penguatan SDM
+Route::get('admin/program-penguatan-sdm', [App\Http\Controllers\ProgramPenguatanSdmController::class, 'index'])->name('program-penguatan-sdm');
+Route::get('admin/program-penguatan-sdm/create', [App\Http\Controllers\ProgramPenguatanSdmController::class, 'create'])->name('program-penguatan-sdm');
+Route::post('admin/program-penguatan-sdm/create', [App\Http\Controllers\ProgramPenguatanSdmController::class, 'store']);
+Route::get('admin/program-penguatan-sdm/{id}/edit', [App\Http\Controllers\ProgramPenguatanSdmController::class, 'edit']);
+Route::put('admin/program-penguatan-sdm/{id}/edit', [App\Http\Controllers\ProgramPenguatanSdmController::class, 'update']);
+Route::get('admin/program-penguatan-sdm/{id}/delete', [App\Http\Controllers\ProgramPenguatanSdmController::class, 'destroy']);
+
+// CRUD - Data Program Penelitian
+Route::get('admin/program-penelitian', [App\Http\Controllers\ProgramPenelitianController::class, 'index'])->name('program-penelitian');
+Route::get('admin/program-penelitian/create', [App\Http\Controllers\ProgramPenelitianController::class, 'create'])->name('program-penelitian');
+Route::post('admin/program-penelitian/create', [App\Http\Controllers\ProgramPenelitianController::class, 'store']);
+Route::get('admin/program-penelitian/{id}/edit', [App\Http\Controllers\ProgramPenelitianController::class, 'edit']);
+Route::put('admin/program-penelitian/{id}/edit', [App\Http\Controllers\ProgramPenelitianController::class, 'update']);
+Route::get('admin/program-penelitian/{id}/delete', [App\Http\Controllers\ProgramPenelitianController::class, 'destroy']);
 
 // End Admin Routes

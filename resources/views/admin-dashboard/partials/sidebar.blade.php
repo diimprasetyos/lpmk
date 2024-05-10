@@ -33,42 +33,13 @@
                         </p>
                     </a>
                 </li>
-                <li class="nav-item {{ Route::currentRouteName() == 'advokasi-kebijakan' ? 'menu-open' : '' }}">
-                    <a href="#"
+                <li class="nav-header">PROGRAM</li>
+                <li class="nav-item">
+                    <a href="{{ url('/admin/advokasi-kebijakan') }}"
                         class="nav-link {{ Route::currentRouteName() == 'advokasi-kebijakan' ? 'active' : '' }}">
-                        <i class="nav-icon fas fa-copy"></i>
-                        <p>
-                            Data
-                            <i class="fas fa-angle-left right"></i>
-                        </p>
+                        <i class="far fa-circle nav-icon"></i>
+                        <p>Advokasi Kebijakaan</p>
                     </a>
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Aspirasi Masukan</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="{{ url('/admin/advokasi-kebijakan') }}"
-                                class="nav-link {{ Route::currentRouteName() == 'advokasi-kebijakan' ? 'active' : '' }}">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Advokasi Kebijakaan</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Program Pembangunan</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Implementasi Pembangunan</p>
-                            </a>
-                        </li>
-                    </ul>
                 </li>
                 <li class="nav-item">
                     <a href="{{ url('/admin/program-aspirasi') }}"
@@ -76,6 +47,33 @@
                         <i class="far fa-circle nav-icon"></i>
                         <p>
                             Program Aspirasi
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ url('/admin/program-perawatan') }}"
+                        class="nav-link {{ Route::currentRouteName() == 'program-perawatan' ? 'active' : '' }}">
+                        <i class="far fa-circle nav-icon"></i>
+                        <p>
+                            Program Perawatan
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ url('/admin/program-penguatan-sdm') }}"
+                        class="nav-link {{ Route::currentRouteName() == 'program-penguatan-sdm' ? 'active' : '' }}">
+                        <i class="far fa-circle nav-icon"></i>
+                        <p>
+                            Program Penguatan SDM
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ url('/admin/program-penelitian') }}"
+                        class="nav-link {{ Route::currentRouteName() == 'program-penelitian' ? 'active' : '' }}">
+                        <i class="far fa-circle nav-icon"></i>
+                        <p>
+                            Program Penelitian
                         </p>
                     </a>
                 </li>

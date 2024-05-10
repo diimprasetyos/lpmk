@@ -1,7 +1,7 @@
 @extends('admin-dashboard.layouts.master')
 
 @section('title')
-    Create Data Program Aspirasi
+    Edit Data Program Aspirasi
 @endsection
 
 @section('content')
@@ -32,6 +32,7 @@
                         <h3 class="card-title">Ubah Program Aspirasi</h3>
                     </div>
                     <!-- /.card-header -->
+
                     <!-- form start -->
                     <form action="{{ url('/admin/program-aspirasi/' . $programAspirasi->id . '/edit') }}" method="POST">
                         @csrf

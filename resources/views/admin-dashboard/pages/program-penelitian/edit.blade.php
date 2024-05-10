@@ -1,7 +1,7 @@
 @extends('admin-dashboard.layouts.master')
 
 @section('title')
-    Edit Data Advokasi Kebijakan
+    Edit Data Program Penelitian
 @endsection
 
 @section('content')
@@ -11,12 +11,12 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1>Data Advokasi Kebijakan</h1>
+                        <h1>Data Program Penelitian</h1>
                     </div>
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="/admin">Home</a></li>
-                            <li class="breadcrumb-item active">Data Advokasi Kebijakan</li>
+                            <li class="breadcrumb-item active">Data Program Penelitian</li>
                         </ol>
                     </div>
                 </div>
@@ -29,37 +29,38 @@
                 <!-- general form elements -->
                 <div class="card card-primary">
                     <div class="card-header">
-                        <h3 class="card-title">Ubah Advokasi Kebijakan
-                        </h3>
+                        <h3 class="card-title">Ubah Program Penelitian</h3>
                     </div>
                     <!-- /.card-header -->
 
                     <!-- form start -->
-                    <form action="{{ url('/admin/advokasi-kebijakan/' . $advokasiKebijakan->id . '/edit') }}"
-                        method="POST">
+                    <form action="{{ url('/admin/program-penelitian/' . $programPenelitian->id . '/edit') }}" method="POST"
+                        enctype="multipart/form-data">
                         @csrf
                         @method('PUT')
 
                         <div class="card-body">
                             <div class="mb-3">
-                                <a href="{{ url('/admin/advokasi-kebijakan') }}" class="btn btn-sm btn-primary">Back</a>
+                                <a href="{{ url('/admin/program-penelitian') }}" class="btn btn-sm btn-primary">Back</a>
                             </div>
                             <div class="form-group">
-                                <label>Kebijakan Didukung</label>
-                                <input type="text" name="kebijakan_didukung" class="form-control"
-                                    placeholder="Masukkan Kebijakan yang Didukung"
-                                    value="{{ $advokasiKebijakan->kebijakan_didukung }}">
-                                @error('kebijakan_didukung')
+                                <label>Judul</label><br>
+                                <input type="text" name="judul" class="form-control"
+                                    placeholder="Masukkan Judul Penelitian" value="{{ $programPenelitian->judul }}">
+                                @error('judul')
                                     <span class="text-danger">{{ $message }}</span>
                                 @enderror
                             </div>
                             <div class="form-group">
-                                <label>Strategi Advokasi</label>
-                                <textarea name="strategi_advokasi" class="form-control" rows="3" placeholder="Masukkan Strategi Advokasi">{{ $advokasiKebijakan->strategi_advokasi }}</textarea>
+                                <label>Deskripsi</label>
+                                <textarea name="deskripsi" class="form-control" rows="3" placeholder="Masukkan Deskripsi">{{ $programPenelitian->deskripsi }}</textarea>
                             </div>
                             <div class="form-group">
-                                <label>Pihak Terkait</label>
-                                <textarea name="pihak_terkait" class="form-control" rows="3" placeholder="Masukkan Pihak Terkait">{{ $advokasiKebijakan->pihak_terkait }}</textarea>
+                                <label>Dokumentasi</label><br>
+                                <input type="file" name="dokumentasi" id="formFile">
+                                @error('dokumentasi')
+                                    <span class="text-danger">{{ $message }}</span>
+                                @enderror
                             </div>
                         </div>
                         <!-- /.card-body -->
