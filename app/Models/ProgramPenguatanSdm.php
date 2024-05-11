@@ -9,5 +9,5 @@ class ProgramPenguatanSdm extends Model
 {
     use HasFactory;
     protected $table = 'program_penguatan_sdm';
-    protected $fillable = ['deskripsi', 'dokumentasi'];
+    protected $fillable = ['judul', 'deskripsi', 'tanggal', 'dokumentasi'];
 }

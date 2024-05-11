@@ -49,7 +49,9 @@
                                     <thead>
                                         <tr>
                                             <th>No</th>
+                                            <th>Judul</th>
                                             <th>Deskripsi</th>
+                                            <th>Tanggal</th>
                                             <th>Dokumentasi</th>
                                             <th>Action</th>
                                         </tr>
@@ -58,7 +60,9 @@
                                         @foreach ($programPenguatanSDM as $item)
                                             <tr>
                                                 <td>{{ $loop->iteration }}</td>
+                                                <td>{{ $item->judul }}</td>
                                                 <td>{{ $item->deskripsi }}</td>
+                                                <td style="width: 10%;">{{ $item->tanggal }}</td>
                                                 <td>
                                                     <img src="{{ asset($item->dokumentasi) }}" style="width: 40%;"
                                                         alt="Image" />

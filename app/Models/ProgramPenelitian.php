@@ -9,5 +9,5 @@ class ProgramPenelitian extends Model
 {
     use HasFactory;
     protected $table = 'program_penelitian';
-    protected $fillable = ['judul', 'deskripsi', 'dokumentasi'];
+    protected $fillable = ['judul', 'deskripsi', 'tanggal', 'dokumentasi'];
 }

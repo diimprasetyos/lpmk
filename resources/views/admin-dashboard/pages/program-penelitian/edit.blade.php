@@ -56,10 +56,18 @@
                                 <textarea name="deskripsi" class="form-control" rows="3" placeholder="Masukkan Deskripsi">{{ $programPenelitian->deskripsi }}</textarea>
                             </div>
                             <div class="form-group">
+                                <label>Tanggal</label>
+                                <input type="date" name="tanggal" class="form-control"
+                                    value="{{ $programPenelitian->tanggal }}">
+                                @error('tanggal')
+                                    <span class="text-danger">{{ $message }}</span>
+                                @enderror
+                            </div>
+                            <div class="form-group">
                                 <label>Dokumentasi</label><br>
                                 <input type="file" name="dokumentasi" id="formFile">
                                 @error('dokumentasi')
-                                    <span class="text-danger">{{ $message }}</span>
+                                    <br><span class="text-danger">{{ $message }}</span>
                                 @enderror
                             </div>
                         </div>

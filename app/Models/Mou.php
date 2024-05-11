@@ -9,5 +9,5 @@ class Mou extends Model
 {
     use HasFactory;
     protected $table = 'mou';
-    protected $fillable = ['pihak', 'deskripsi'];
+    protected $fillable = ['judul', 'nama_mitra', 'deskripsi', 'dokumen'];
 }

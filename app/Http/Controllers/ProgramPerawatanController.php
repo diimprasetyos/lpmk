@@ -22,7 +22,9 @@ class ProgramPerawatanController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'deskripsi' => 'required|max:255|string',
+            'judul' => 'required|max:255|string',
+            'deskripsi' => 'required',
+            'tanggal' => 'required|date',
             'dokumentasi' => 'required|mimes:png,jpg,jpeg,webp'
         ]);
 
@@ -38,7 +40,9 @@ class ProgramPerawatanController extends Controller
         }
 
         ProgramPerawatan::create([
+            'judul' => $request->judul,
             'deskripsi' => $request->deskripsi,
+            'tanggal' => $request->tanggal,
             'dokumentasi' => $path.$filename
         ]);
 
@@ -54,7 +58,9 @@ class ProgramPerawatanController extends Controller
     public function update(Request $request, int $id)
     {
         $request->validate([
-            'deskripsi' => 'required|max:255|string',
+            'judul' => 'required|max:255|string',
+            'deskripsi' => 'required',
+            'tanggal' => 'required|date',
             'dokumentasi' => 'required|mimes:png,jpg,jpeg,webp'
         ]);
 
@@ -76,7 +82,9 @@ class ProgramPerawatanController extends Controller
         }
 
         $programPerawatan->update([
+            'judul' => $request->judul,
             'deskripsi' => $request->deskripsi,
+            'tanggal' => $request->tanggal,
             'dokumentasi' => $path.$filename
         ]);
 

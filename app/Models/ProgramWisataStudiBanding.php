@@ -9,5 +9,5 @@ class ProgramWisataStudiBanding extends Model
 {
     use HasFactory;
     protected $table = 'program_wisata_studi_banding';
-    protected $fillable = ['tanggal', 'jenis', 'deskripsi'];
+    protected $fillable = ['judul', 'deskripsi', 'jenis', 'tanggal', 'dokumentasi'];
 }

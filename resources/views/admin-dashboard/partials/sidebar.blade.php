@@ -77,6 +77,24 @@
                         </p>
                     </a>
                 </li>
+                <li class="nav-item">
+                    <a href="{{ url('/admin/mou') }}"
+                        class="nav-link {{ Route::currentRouteName() == 'mou' ? 'active' : '' }}">
+                        <i class="far fa-circle nav-icon"></i>
+                        <p>
+                            MOU
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ url('/admin/program-wisata-sb') }}"
+                        class="nav-link {{ Route::currentRouteName() == 'program-wisata-sb' ? 'active' : '' }}">
+                        <i class="far fa-circle nav-icon"></i>
+                        <p>
+                            Program Wisata/Studi Banding
+                        </p>
+                    </a>
+                </li>
             </ul>
         </nav>
         <!-- /.sidebar-menu -->

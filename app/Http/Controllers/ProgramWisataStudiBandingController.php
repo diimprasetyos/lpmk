@@ -3,20 +3,20 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\ProgramPenelitian;
+use App\Models\ProgramWisataStudiBanding;
 use Illuminate\Support\Facades\File;
 
-class ProgramPenelitianController extends Controller
+class ProgramWisataStudiBandingController extends Controller
 {
     public function index()
     {
-        $programPenelitian = ProgramPenelitian::get();
-        return view('admin-dashboard.pages.program-penelitian.index', compact('programPenelitian'));
+        $programWisataSB = ProgramWisataStudiBanding::get();
+        return view('admin-dashboard.pages.program-wisata-sb.index', compact('programWisataSB'));
     }
 
     public function create()
     {
-        return view('admin-dashboard.pages.program-penelitian.create');
+        return view('admin-dashboard.pages.program-wisata-sb.create');
     }
 
     public function store(Request $request)
@@ -24,6 +24,7 @@ class ProgramPenelitianController extends Controller
         $request->validate([
             'judul' => 'required|max:255|string',
             'deskripsi' => 'required',
+            'jenis' => 'required|max:255|string',
             'tanggal' => 'required|date',
             'dokumentasi' => 'required|mimes:png,jpg,jpeg,webp'
         ]);
@@ -35,24 +36,25 @@ class ProgramPenelitianController extends Controller
 
             $filename = time().'.'.$extension;
 
-            $path = 'uploads/program-penelitian/';
+            $path = 'uploads/program-wisata-sb/';
             $file->move($path, $filename);
         }
 
-        ProgramPenelitian::create([
+        ProgramWisataStudiBanding::create([
             'judul' => $request->judul,
             'deskripsi' => $request->deskripsi,
+            'jenis' => $request->jenis,
             'tanggal' => $request->tanggal,
             'dokumentasi' => $path.$filename
         ]);
 
-        return redirect('admin/program-penelitian')->with('status', 'Program Penelitian Berhasil Ditambahkan');
+        return redirect('admin/program-wisata-sb')->with('status', 'Program Wisaata/Studi Banding Berhasil Ditambahkan');
     }
 
     public function edit(int $id)
     {
-        $programPenelitian = ProgramPenelitian::findOrFail($id);
-        return view('admin-dashboard.pages.program-penelitian.edit', compact('programPenelitian'));
+        $programWisataSB = ProgramWisataStudiBanding::findOrFail($id);
+        return view('admin-dashboard.pages.program-wisata-sb.edit', compact('programWisataSB'));
     }
 
     public function update(Request $request, int $id)
@@ -60,11 +62,12 @@ class ProgramPenelitianController extends Controller
         $request->validate([
             'judul' => 'required|max:255|string',
             'deskripsi' => 'required',
+            'jenis' => 'required|max:255|string',
             'tanggal' => 'required|date',
             'dokumentasi' => 'required|mimes:png,jpg,jpeg,webp'
         ]);
 
-        $programPenelitian = ProgramPenelitian::findOrFail($id);
+        $programWisataSB = ProgramWisataStudiBanding::findOrFail($id);
         if($request->has('dokumentasi'))
         {
             $file = $request->file('dokumentasi');
@@ -72,35 +75,36 @@ class ProgramPenelitianController extends Controller
 
             $filename = time().'.'.$extension;
 
-            $path = 'uploads/program-penelitian/';
+            $path = 'uploads/program-wisata-sb/';
             $file->move($path, $filename);
 
-            if(File::exists($programPenelitian->dokumentasi))
+            if(File::exists($programWisataSB->dokumentasi))
             {
-                File::delete($programPenelitian->dokumentasi);
+                File::delete($programWisataSB->dokumentasi);
             }
         }
 
-        $programPenelitian->update([
+        $programWisataSB->update([
             'judul' => $request->judul,
             'deskripsi' => $request->deskripsi,
+            'jenis' => $request->jenis,
             'tanggal' => $request->tanggal,
             'dokumentasi' => $path.$filename
         ]);
 
-        return redirect('admin/program-penelitian')->with('status', 'Program Penelitian Berhasil Diubah');
+        return redirect('admin/program-wisata-sb')->with('status', 'Program Wisaata/Studi Banding Berhasil Diubah');
     }
 
     public function destroy(int $id)
     {
-        $programPenelitian = ProgramPenelitian::findOrFail($id);
-        if(File::exists($programPenelitian->dokumentasi))
+        $programWisataSB = ProgramWisataStudiBanding::findOrFail($id);
+        if(File::exists($programWisataSB->dokumentasi))
         {
-            File::delete($programPenelitian->dokumentasi);
+            File::delete($programWisataSB->dokumentasi);
         }
 
-        $programPenelitian->delete();
+        $programWisataSB->delete();
 
-        return redirect('admin/program-penelitian')->with('status', 'Program Penelitian Berhasil Dihapus');
+        return redirect('admin/program-wisata-sb')->with('status', 'Program Wisaata/Studi Banding Berhasil Dihapus');
     }
 }

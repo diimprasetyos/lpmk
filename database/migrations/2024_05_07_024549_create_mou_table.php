@@ -13,8 +13,10 @@ return new class extends Migration
     {
         Schema::create('mou', function (Blueprint $table) {
             $table->id();
-            $table->string('pihak');
+            $table->string('judul');
+            $table->string('nama_mitra');
             $table->text('deskripsi');
+            $table->string('dokumen');
             $table->timestamps();
         });
     }

@@ -44,7 +44,8 @@
                             </div>
                             <div class="form-group">
                                 <label>Judul</label><br>
-                                <input type="text" name="judul" class="form-control" id="formFile">
+                                <input type="text" name="judul" class="form-control"
+                                    placeholder="Masukkan Judul Program Penelitian" value="{{ old('judul') }}">
                                 @error('judul')
                                     <span class="text-danger">{{ $message }}</span>
                                 @enderror
@@ -54,10 +55,17 @@
                                 <textarea name="deskripsi" class="form-control" rows="3" placeholder="Masukkan Deskripsi">{{ old('deskripsi') }}</textarea>
                             </div>
                             <div class="form-group">
+                                <label>Tanggal</label>
+                                <input type="date" name="tanggal" class="form-control" value="{{ old('tanggal') }}">
+                                @error('tanggal')
+                                    <span class="text-danger">{{ $message }}</span>
+                                @enderror
+                            </div>
+                            <div class="form-group">
                                 <label>Dokumentasi</label><br>
                                 <input type="file" name="dokumentasi" id="formFile">
                                 @error('dokumentasi')
-                                    <span class="text-danger">{{ $message }}</span>
+                                    <br><span class="text-danger">{{ $message }}</span>
                                 @enderror
                             </div>
                         </div>

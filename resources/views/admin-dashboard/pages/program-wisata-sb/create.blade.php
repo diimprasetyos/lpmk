@@ -1,7 +1,7 @@
 @extends('admin-dashboard.layouts.master')
 
 @section('title')
-    Create Data Program Perawatan
+    Create Data Program Wisata/Studi Banding
 @endsection
 
 @section('content')
@@ -11,12 +11,12 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1>Data Program Perawatan</h1>
+                        <h1>Data Program Wisata/Studi Banding</h1>
                     </div>
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="/admin">Home</a></li>
-                            <li class="breadcrumb-item active">Data Program Perawatan</li>
+                            <li class="breadcrumb-item active">Data Program Wisata/Studi Banding</li>
                         </ol>
                     </div>
                 </div>
@@ -29,22 +29,22 @@
                 <!-- general form elements -->
                 <div class="card card-primary">
                     <div class="card-header">
-                        <h3 class="card-title">Tambahkan Program Perawatan</h3>
+                        <h3 class="card-title">Tambahkan Program Wisata/Studi Banding</h3>
                     </div>
                     <!-- /.card-header -->
 
                     <!-- form start -->
-                    <form action="{{ url('admin/program-perawatan/create') }}" method="POST" enctype="multipart/form-data">
+                    <form action="{{ url('admin/program-wisata-sb/create') }}" method="POST" enctype="multipart/form-data">
                         @csrf
 
                         <div class="card-body">
                             <div class="mb-3">
-                                <a href="{{ url('/admin/program-perawatan') }}" class="btn btn-sm btn-primary">Back</a>
+                                <a href="{{ url('/admin/program-wisata-sb') }}" class="btn btn-sm btn-primary">Back</a>
                             </div>
                             <div class="form-group">
                                 <label>Judul</label>
                                 <input type="text" name="judul" class="form-control"
-                                    placeholder="Masukkan Judul Program Perawatan" value="{{ old('judul') }}">
+                                    placeholder="Masukkan Judul Program Wisata/Studi Banding" value="{{ old('judul') }}">
                                 @error('judul')
                                     <span class="text-danger">{{ $message }}</span>
                                 @enderror
@@ -52,6 +52,14 @@
                             <div class="form-group">
                                 <label>Deskripsi</label>
                                 <textarea name="deskripsi" class="form-control" rows="3" placeholder="Masukkan Deskripsi">{{ old('deskripsi') }}</textarea>
+                            </div>
+                            <div class="form-group">
+                                <label>Jenis</label>
+                                <input type="text" name="jenis" class="form-control"
+                                    placeholder="Masukkan Jenis Program Wisata/Studi Banding" value="{{ old('jenis') }}">
+                                @error('jenis')
+                                    <span class="text-danger">{{ $message }}</span>
+                                @enderror
                             </div>
                             <div class="form-group">
                                 <label>Tanggal</label>

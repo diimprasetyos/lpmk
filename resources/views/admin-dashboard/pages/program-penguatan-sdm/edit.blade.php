@@ -44,14 +44,31 @@
                                 <a href="{{ url('/admin/program-penguatan-sdm') }}" class="btn btn-sm btn-primary">Back</a>
                             </div>
                             <div class="form-group">
+                                <label>Judul</label><br>
+                                <input type="text" name="judul" class="form-control"
+                                    placeholder="Masukkan Judul Program Penguatan SDM"
+                                    value="{{ $programPenguatanSDM->judul }}">
+                                @error('judul')
+                                    <span class="text-danger">{{ $message }}</span>
+                                @enderror
+                            </div>
+                            <div class="form-group">
                                 <label>Deskripsi</label>
                                 <textarea name="deskripsi" class="form-control" rows="3" placeholder="Masukkan Deskripsi">{{ $programPenguatanSDM->deskripsi }}</textarea>
+                            </div>
+                            <div class="form-group">
+                                <label>Tanggal</label>
+                                <input type="date" name="tanggal" class="form-control"
+                                    value="{{ $programPenguatanSDM->tanggal }}">
+                                @error('tanggal')
+                                    <span class="text-danger">{{ $message }}</span>
+                                @enderror
                             </div>
                             <div class="form-group">
                                 <label>Dokumentasi</label><br>
                                 <input type="file" name="dokumentasi" id="formFile">
                                 @error('dokumentasi')
-                                    <span class="text-danger">{{ $message }}</span>
+                                    <br><span class="text-danger">{{ $message }}</span>
                                 @enderror
                             </div>
                         </div>

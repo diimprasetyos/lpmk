@@ -1,7 +1,7 @@
 @extends('admin-dashboard.layouts.master')
 
 @section('title')
-    Program Perawatan
+    MOU
 @endsection
 
 @section('content')
@@ -11,12 +11,12 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1>Data Program Perawatan</h1>
+                        <h1>Data MOU</h1>
                     </div>
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="/admin">Home</a></li>
-                            <li class="breadcrumb-item active">Data Program Perawatan</li>
+                            <li class="breadcrumb-item active">Data MOU</li>
                         </ol>
                     </div>
                 </div>
@@ -30,7 +30,7 @@
                     <div class="col-12">
                         <div class="card">
                             <div class="card-header">
-                                <h3 class="card-title">Program Perawatan</h3>
+                                <h3 class="card-title">MOU</h3>
                             </div>
                             <!-- /.card-header -->
 
@@ -41,36 +41,35 @@
                                 @endif
 
                                 <div class="mb-2 w-50">
-                                    <a href="{{ url('/admin/program-perawatan/create') }}"
+                                    <a href="{{ url('/admin/mou/create') }}"
                                         class="btn btn-primary btn-sm btn-flat">Create</a>
-                                    <a href="" class="btn btn-default btn-sm btn-flat">Print</a>
                                 </div>
                                 <table class="table table-bordered table-striped">
                                     <thead>
                                         <tr>
                                             <th>No</th>
                                             <th>Judul</th>
+                                            <th>Nama Mitra</th>
                                             <th>Deskripsi</th>
-                                            <th>Tanggal</th>
-                                            <th>Dokumentasi</th>
+                                            <th>File</th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        @foreach ($programPerawatan as $item)
+                                        @foreach ($MOU as $item)
                                             <tr>
                                                 <td>{{ $loop->iteration }}</td>
                                                 <td>{{ $item->judul }}</td>
+                                                <td>{{ $item->nama_mitra }}</td>
                                                 <td>{{ $item->deskripsi }}</td>
-                                                <td style="width: 10%;">{{ $item->tanggal }}</td>
                                                 <td>
-                                                    <img src="{{ asset($item->dokumentasi) }}" style="width: 40%;"
-                                                        alt="Image" />
+                                                    <a href="{{ route('download.file', ['id' => $item->id]) }}"
+                                                        download>Download</a>
                                                 </td>
                                                 <td>
-                                                    <a href="{{ url('/admin/program-perawatan/' . $item->id . '/edit') }}"
+                                                    <a href="{{ url('/admin/mou/' . $item->id . '/edit') }}"
                                                         class="btn btn-warning btn-sm mx-2 my-1">Edit</a>
-                                                    <a href="{{ url('/admin/program-perawatan/' . $item->id . '/delete') }}"
+                                                    <a href="{{ url('/admin/mou/' . $item->id . '/delete') }}"
                                                         class="btn btn-danger btn-sm mx-2 my-1"
                                                         onclick="return confirm('Apakah anda yakin?')">Delete</a>
                                                 </td>

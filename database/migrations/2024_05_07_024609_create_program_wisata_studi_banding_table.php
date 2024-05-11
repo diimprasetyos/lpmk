@@ -13,9 +13,11 @@ return new class extends Migration
     {
         Schema::create('program_wisata_studi_banding', function (Blueprint $table) {
             $table->id();
-            $table->date('tanggal');
-            $table->string('jenis');
+            $table->string('judul');
             $table->text('deskripsi');
+            $table->string('jenis');
+            $table->date('tanggal');
+            $table->string('dokumentasi');
             $table->timestamps();
         });
     }

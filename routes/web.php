@@ -151,4 +151,20 @@ Route::get('admin/program-penelitian/{id}/edit', [App\Http\Controllers\ProgramPe
 Route::put('admin/program-penelitian/{id}/edit', [App\Http\Controllers\ProgramPenelitianController::class, 'update']);
 Route::get('admin/program-penelitian/{id}/delete', [App\Http\Controllers\ProgramPenelitianController::class, 'destroy']);
 
+// CRUD - Data MOU
+Route::get('admin/mou', [App\Http\Controllers\MOUController::class, 'index'])->name('mou');
+Route::get('admin/mou/create', [App\Http\Controllers\MOUController::class, 'create'])->name('mou');
+Route::post('admin/mou/create', [App\Http\Controllers\MOUController::class, 'store']);
+Route::get('admin/mou/{id}/edit', [App\Http\Controllers\MOUController::class, 'edit']);
+Route::put('admin/mou/{id}/edit', [App\Http\Controllers\MOUController::class, 'update']);
+Route::get('admin/mou/{id}/delete', [App\Http\Controllers\MOUController::class, 'destroy']);
+
+// CRUD - Data Program Wisata/StudiBanding
+Route::get('admin/program-wisata-sb', [App\Http\Controllers\ProgramWisataStudiBandingController::class, 'index'])->name('program-wisata-sb');
+Route::get('admin/program-wisata-sb/create', [App\Http\Controllers\ProgramWisataStudiBandingController::class, 'create'])->name('program-wisata-sb');
+Route::post('admin/program-wisata-sb/create', [App\Http\Controllers\ProgramWisataStudiBandingController::class, 'store']);
+Route::get('admin/program-wisata-sb/{id}/edit', [App\Http\Controllers\ProgramWisataStudiBandingController::class, 'edit']);
+Route::put('admin/program-wisata-sb/{id}/edit', [App\Http\Controllers\ProgramWisataStudiBandingController::class, 'update']);
+Route::get('admin/program-wisata-sb/{id}/delete', [App\Http\Controllers\ProgramWisataStudiBandingController::class, 'destroy']);
+
 // End Admin Routes

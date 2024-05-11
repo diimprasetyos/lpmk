@@ -13,7 +13,9 @@ return new class extends Migration
     {
         Schema::create('program_penguatan_sdm', function (Blueprint $table) {
             $table->id();
+            $table->string('judul');
             $table->text('deskripsi');
+            $table->date('tanggal');
             $table->string('dokumentasi');
             $table->timestamps();
         });
