@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Models\ProgramAspirasi;
 use App\Models\DetailProgramAspirasi;
+use Barryvdh\DomPDF\Facade\Pdf;
 
 class ProgramAspirasiController extends Controller
 {
@@ -86,5 +87,17 @@ class ProgramAspirasiController extends Controller
         $detail->delete();
 
         return redirect('admin/program-aspirasi')->with('status', 'Program Aspirasi Berhasil Dihapus');
+    }
+
+    public function print()
+    {
+        $programAspirasi = ProgramAspirasi::get();
+        $data = [
+            'date' => date('m/d/Y'),
+            'programAspirasi' => $programAspirasi
+        ];
+
+        $pdf = Pdf::loadView('admin-dashboard.pages.program-aspirasi.print', $data);
+        return $pdf->stream();
     }
 }

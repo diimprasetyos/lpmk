@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\ProgramPenelitian;
 use Illuminate\Support\Facades\File;
+use Barryvdh\DomPDF\Facade\Pdf;
 
 class ProgramPenelitianController extends Controller
 {
@@ -102,5 +103,17 @@ class ProgramPenelitianController extends Controller
         $programPenelitian->delete();
 
         return redirect('admin/program-penelitian')->with('status', 'Program Penelitian Berhasil Dihapus');
+    }
+
+    public function print()
+    {
+        $programPenelitian = ProgramPenelitian::get();
+        $data = [
+            'date' => date('m/d/Y'),
+            'programPenelitian' => $programPenelitian
+        ];
+
+        $pdf = Pdf::loadView('admin-dashboard.pages.program-penelitian.print', $data);
+        return $pdf->stream();
     }
 }

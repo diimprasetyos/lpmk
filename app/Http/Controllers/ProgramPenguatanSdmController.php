@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\ProgramPenguatanSdm;
 use Illuminate\Support\Facades\File;
+use Barryvdh\DomPDF\Facade\Pdf;
 
 class ProgramPenguatanSdmController extends Controller
 {
@@ -102,5 +103,17 @@ class ProgramPenguatanSdmController extends Controller
         $programPenguatanSDM->delete();
 
         return redirect('admin/program-penguatan-sdm')->with('status', 'Program Penguatan SDM Berhasil Dihapus');
+    }
+
+    public function print()
+    {
+        $programPenguatanSDM = ProgramPenguatanSdm::get();
+        $data = [
+            'date' => date('m/d/Y'),
+            'programPenguatanSDM' => $programPenguatanSDM
+        ];
+
+        $pdf = Pdf::loadView('admin-dashboard.pages.program-penguatan-sdm.print', $data);
+        return $pdf->stream();
     }
 }

@@ -118,6 +118,7 @@ Route::post('admin/advokasi-kebijakan/create', [App\Http\Controllers\AdvokasiKeb
 Route::get('admin/advokasi-kebijakan/{id}/edit', [App\Http\Controllers\AdvokasiKebijakanController::class, 'edit']);
 Route::put('admin/advokasi-kebijakan/{id}/edit', [App\Http\Controllers\AdvokasiKebijakanController::class, 'update']);
 Route::get('admin/advokasi-kebijakan/{id}/delete', [App\Http\Controllers\AdvokasiKebijakanController::class, 'destroy']);
+Route::get('admin/advokasi-kebijakan/print', [App\Http\Controllers\AdvokasiKebijakanController::class, 'print']);
 
 // CRUD - Data Program Aspirasi
 Route::get('admin/program-aspirasi', [App\Http\Controllers\ProgramAspirasiController::class, 'index'])->name('program-aspirasi');
@@ -126,6 +127,7 @@ Route::post('admin/program-aspirasi/create', [App\Http\Controllers\ProgramAspira
 Route::get('admin/program-aspirasi/{id}/edit', [App\Http\Controllers\ProgramAspirasiController::class, 'edit']);
 Route::put('admin/program-aspirasi/{id}/edit', [App\Http\Controllers\ProgramAspirasiController::class, 'update']);
 Route::get('admin/program-aspirasi/{id}/delete', [App\Http\Controllers\ProgramAspirasiController::class, 'destroy']);
+Route::get('admin/program-aspirasi/print', [App\Http\Controllers\ProgramAspirasiController::class, 'print']);
 
 // CRUD - Data Program Perawatan
 Route::get('admin/program-perawatan', [App\Http\Controllers\ProgramPerawatanController::class, 'index'])->name('program-perawatan');
@@ -134,6 +136,7 @@ Route::post('admin/program-perawatan/create', [App\Http\Controllers\ProgramPeraw
 Route::get('admin/program-perawatan/{id}/edit', [App\Http\Controllers\ProgramPerawatanController::class, 'edit']);
 Route::put('admin/program-perawatan/{id}/edit', [App\Http\Controllers\ProgramPerawatanController::class, 'update']);
 Route::get('admin/program-perawatan/{id}/delete', [App\Http\Controllers\ProgramPerawatanController::class, 'destroy']);
+Route::get('admin/program-perawatan/print', [App\Http\Controllers\ProgramPerawatanController::class, 'print']);
 
 // CRUD - Data Program Penguatan SDM
 Route::get('admin/program-penguatan-sdm', [App\Http\Controllers\ProgramPenguatanSdmController::class, 'index'])->name('program-penguatan-sdm');
@@ -142,6 +145,7 @@ Route::post('admin/program-penguatan-sdm/create', [App\Http\Controllers\ProgramP
 Route::get('admin/program-penguatan-sdm/{id}/edit', [App\Http\Controllers\ProgramPenguatanSdmController::class, 'edit']);
 Route::put('admin/program-penguatan-sdm/{id}/edit', [App\Http\Controllers\ProgramPenguatanSdmController::class, 'update']);
 Route::get('admin/program-penguatan-sdm/{id}/delete', [App\Http\Controllers\ProgramPenguatanSdmController::class, 'destroy']);
+Route::get('admin/program-penguatan-sdm/print', [App\Http\Controllers\ProgramPenguatanSdmController::class, 'print']);
 
 // CRUD - Data Program Penelitian
 Route::get('admin/program-penelitian', [App\Http\Controllers\ProgramPenelitianController::class, 'index'])->name('program-penelitian');
@@ -150,6 +154,7 @@ Route::post('admin/program-penelitian/create', [App\Http\Controllers\ProgramPene
 Route::get('admin/program-penelitian/{id}/edit', [App\Http\Controllers\ProgramPenelitianController::class, 'edit']);
 Route::put('admin/program-penelitian/{id}/edit', [App\Http\Controllers\ProgramPenelitianController::class, 'update']);
 Route::get('admin/program-penelitian/{id}/delete', [App\Http\Controllers\ProgramPenelitianController::class, 'destroy']);
+Route::get('admin/program-penelitian/print', [App\Http\Controllers\ProgramPenelitianController::class, 'print']);
 
 // CRUD - Data MOU
 Route::get('admin/mou', [App\Http\Controllers\MOUController::class, 'index'])->name('mou');
@@ -166,5 +171,6 @@ Route::post('admin/program-wisata-sb/create', [App\Http\Controllers\ProgramWisat
 Route::get('admin/program-wisata-sb/{id}/edit', [App\Http\Controllers\ProgramWisataStudiBandingController::class, 'edit']);
 Route::put('admin/program-wisata-sb/{id}/edit', [App\Http\Controllers\ProgramWisataStudiBandingController::class, 'update']);
 Route::get('admin/program-wisata-sb/{id}/delete', [App\Http\Controllers\ProgramWisataStudiBandingController::class, 'destroy']);
+Route::get('admin/program-wisata-sb/print', [App\Http\Controllers\ProgramWisataStudiBandingController::class, 'print']);
 
 // End Admin Routes

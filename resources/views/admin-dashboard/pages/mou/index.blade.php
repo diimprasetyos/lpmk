@@ -47,7 +47,7 @@
                                 <table class="table table-bordered table-striped">
                                     <thead>
                                         <tr>
-                                            <th>No</th>
+                                            <th>ID</th>
                                             <th>Judul</th>
                                             <th>Nama Mitra</th>
                                             <th>Deskripsi</th>
@@ -58,13 +58,12 @@
                                     <tbody>
                                         @foreach ($MOU as $item)
                                             <tr>
-                                                <td>{{ $loop->iteration }}</td>
+                                                <td>{{ $item->id }}</td>
                                                 <td>{{ $item->judul }}</td>
                                                 <td>{{ $item->nama_mitra }}</td>
                                                 <td>{{ $item->deskripsi }}</td>
                                                 <td>
-                                                    <a href="{{ route('download.file', ['id' => $item->id]) }}"
-                                                        download>Download</a>
+                                                    <a href="{{ asset($item->dokumen) }}" download>Download</a>
                                                 </td>
                                                 <td>
                                                     <a href="{{ url('/admin/mou/' . $item->id . '/edit') }}"

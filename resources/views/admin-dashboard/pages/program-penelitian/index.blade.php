@@ -43,12 +43,13 @@
                                 <div class="mb-2 w-50">
                                     <a href="{{ url('/admin/program-penelitian/create') }}"
                                         class="btn btn-primary btn-sm btn-flat">Create</a>
-                                    <a href="" class="btn btn-default btn-sm btn-flat">Print</a>
+                                    <a href="{{ url('admin/program-penelitian/print') }}"
+                                        class="btn btn-default btn-sm btn-flat" target="_blank">Print</a>
                                 </div>
                                 <table class="table table-bordered table-striped">
                                     <thead>
                                         <tr>
-                                            <th>No</th>
+                                            <th>ID</th>
                                             <th>Judul</th>
                                             <th>Deskripsi</th>
                                             <th>Tanggal</th>
@@ -59,7 +60,7 @@
                                     <tbody>
                                         @foreach ($programPenelitian as $item)
                                             <tr>
-                                                <td>{{ $loop->iteration }}</td>
+                                                <td>{{ $item->id }}</td>
                                                 <td>{{ $item->judul }}</td>
                                                 <td>{{ $item->deskripsi }}</td>
                                                 <td style="width: 10%;">{{ $item->tanggal }}</td>

@@ -43,17 +43,18 @@
                                 <div class="mb-2 w-50">
                                     <a href="{{ url('/admin/program-aspirasi/create') }}"
                                         class="btn btn-primary btn-sm btn-flat">Create</a>
-                                    <a href="" class="btn btn-default btn-sm btn-flat">Print</a>
+                                    <a href="{{ url('admin/program-aspirasi/print') }}"
+                                        class="btn btn-default btn-sm btn-flat" target="_blank">Print</a>
                                 </div>
                                 <table class="table table-bordered table-striped">
                                     <thead>
                                         <tr>
-                                            <th>No</th>
+                                            <th>ID</th>
+                                            <th>Judul</th>
                                             <th>Prioritas</th>
                                             <th>RT</th>
                                             <th>RW</th>
                                             <th>Deskripsi</th>
-                                            <th>File</th>
                                             <th>Perantara</th>
                                             <th>Action</th>
                                         </tr>
@@ -61,7 +62,7 @@
                                     <tbody>
                                         @foreach ($programAspirasi as $item)
                                             <tr>
-                                                <td>{{ $loop->iteration }}</td>
+                                                <td>{{ $item->id }}</td>
                                                 <td>{{ $item->detailProgramAspirasi->title }}</td>
                                                 <td>{{ $item->detailProgramAspirasi->prioritas }}</td>
                                                 <td>{{ $item->detailProgramAspirasi->rt }}</td>

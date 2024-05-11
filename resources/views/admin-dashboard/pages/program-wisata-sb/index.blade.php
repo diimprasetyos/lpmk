@@ -43,12 +43,13 @@
                                 <div class="mb-2 w-50">
                                     <a href="{{ url('/admin/program-wisata-sb/create') }}"
                                         class="btn btn-primary btn-sm btn-flat">Create</a>
-                                    <a href="" class="btn btn-default btn-sm btn-flat">Print</a>
+                                    <a href="{{ url('admin/program-wisata-sb/print') }}"
+                                        class="btn btn-default btn-sm btn-flat" target="_blank">Print</a>
                                 </div>
                                 <table class="table table-bordered table-striped">
                                     <thead>
                                         <tr>
-                                            <th>No</th>
+                                            <th>ID</th>
                                             <th>Judul</th>
                                             <th>Deskripsi</th>
                                             <th>Jenis</th>
@@ -60,7 +61,7 @@
                                     <tbody>
                                         @foreach ($programWisataSB as $item)
                                             <tr>
-                                                <td>{{ $loop->iteration }}</td>
+                                                <td>{{ $item->ID }}</td>
                                                 <td>{{ $item->judul }}</td>
                                                 <td>{{ $item->deskripsi }}</td>
                                                 <td>{{ $item->jenis }}</td>

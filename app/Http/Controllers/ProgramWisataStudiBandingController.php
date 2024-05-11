@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\ProgramWisataStudiBanding;
 use Illuminate\Support\Facades\File;
+use Barryvdh\DomPDF\Facade\Pdf;
 
 class ProgramWisataStudiBandingController extends Controller
 {
@@ -106,5 +107,17 @@ class ProgramWisataStudiBandingController extends Controller
         $programWisataSB->delete();
 
         return redirect('admin/program-wisata-sb')->with('status', 'Program Wisaata/Studi Banding Berhasil Dihapus');
+    }
+
+    public function print()
+    {
+        $programWisataSB = ProgramWisataStudiBanding::get();
+        $data = [
+            'date' => date('m/d/Y'),
+            'programWisataSB' => $programWisataSB
+        ];
+
+        $pdf = Pdf::loadView('admin-dashboard.pages.program-wisata-sb.print', $data);
+        return $pdf->stream();
     }
 }

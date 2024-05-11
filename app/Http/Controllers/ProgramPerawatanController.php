@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\ProgramPerawatan;
 use Illuminate\Support\Facades\File;
+use Barryvdh\DomPDF\Facade\Pdf;
 
 class ProgramPerawatanController extends Controller
 {
@@ -102,5 +103,17 @@ class ProgramPerawatanController extends Controller
         $programPerawatan->delete();
 
         return redirect('admin/program-perawatan')->with('status', 'Program Perawatan Berhasil Dihapus');
+    }
+
+    public function print()
+    {
+        $programPerawatan = ProgramPerawatan::get();
+        $data = [
+            'date' => date('m/d/Y'),
+            'programPerawatan' => $programPerawatan
+        ];
+
+        $pdf = Pdf::loadView('admin-dashboard.pages.program-perawatan.print', $data);
+        return $pdf->stream();
     }
 }
