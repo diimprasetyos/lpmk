@@ -13,10 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Frontend Routes
+// Frontend Tanjungrejo Routes========================
 
 // Beranda
-Route::get('/', function () {
+Route::get('/kecamatan', function () {
     return view('frontend.pages.home');
 });
 
@@ -76,7 +76,22 @@ Route::get('/kontak', function () {
     return view('frontend.pages.kontak');
 });
 
-// End Frontend Routes
+// End Frontend Tanjungrejo Routes===============
+
+// Frontend LPMK Kota Routes=====================
+Route::get('/', function () {
+    return view('frontend-kota.pages.home');
+});
+
+Route::get('/lpmk-kecamatan', function () {
+    return view('frontend-kota.pages.lpmk-kecamatan');
+});
+
+Route::get('/not-found', function () {
+    return view('frontend-kota.error');
+});
+
+// End Frontend LPMK Kota Routes=================
 
 // Auth Routes
 

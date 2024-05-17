@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kecamatan di Kota Malang</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+  <div class="container mt-5">
+    <h1 class="text-center mb-4">Kecamatan di Kota Malang</h1>
+
+    <!-- Dropdown Pilihan Kecamatan -->
+    <div class="form-group">
+      <label for="selectKecamatan">Pilih Kecamatan:</label>
+      <select class="form-control" id="selectKecamatan">
+        <option value="Blimbing">Blimbing</option>
+        <option value="Kedungkandang">Kedungkandang</option>
+        <option value="Klojen">Klojen</option>
+        <option value="Lowokwaru">Lowokwaru</option>
+        <option value="Sukun">Sukun</option>
+      </select>
+    </div>
+    
+    <!-- Blimbing -->
+    <div id="Blimbing" class="kecamatan">
+      <div class="card mb-4">
+        <div class="card-header">
+          <h2>Blimbing (11)</h2>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <!-- List Kelurahan Blimbing -->
+            <!-- Isi list kelurahan Blimbing di sini -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Kedungkandang -->
+    <div id="Kedungkandang" class="kecamatan" style="display:none;">
+      <div class="card mb-4">
+        <div class="card-header">
+          <h2>Kedungkandang (12)</h2>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <!-- List Kelurahan Kedungkandang -->
+            <!-- Isi list kelurahan Kedungkandang di sini -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Klojen -->
+    <div id="Klojen" class="kecamatan" style="display:none;">
+      <div class="card mb-4">
+        <div class="card-header">
+          <h2>Klojen (11)</h2>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <!-- List Kelurahan Klojen -->
+            <!-- Isi list kelurahan Klojen di sini -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Lowokwaru -->
+    <div id="Lowokwaru" class="kecamatan" style="display:none;">
+      <div class="card mb-4">
+        <div class="card-header">
+          <h2>Lowokwaru (12)</h2>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <!-- List Kelurahan Lowokwaru -->
+            <!-- Isi list kelurahan Lowokwaru di sini -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sukun -->
+    <div id="Sukun" class="kecamatan" style="display:none;">
+      <div class="card mb-4">
+        <div class="card-header">
+          <h2>Sukun (11)</h2>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <!-- List Kelurahan Sukun -->
+            <!-- Isi list kelurahan Sukun di sini -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Bootstrap JS and dependencies -->
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <script>
+    $(document).ready(function(){
+      $("#selectKecamatan").change(function(){
+        var selectedKecamatan = $(this).val();
+        $(".kecamatan").hide();
+        $("#" + selectedKecamatan).show();
+      });
+    });
+  </script>
+
+</body>
+</html>
