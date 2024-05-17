@@ -83,6 +83,10 @@ Route::get('/', function () {
     return view('frontend-kota.pages.home');
 });
 
+Route::get('/lpmk-kecamatan', function () {
+    return view('frontend-kota.pages.lpmk-kecamatan');
+});
+
 Route::get('/not-found', function () {
     return view('frontend-kota.error');
 });
