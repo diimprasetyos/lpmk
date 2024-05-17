@@ -56,6 +56,7 @@
                                             <th>RW</th>
                                             <th>Deskripsi</th>
                                             <th>Perantara</th>
+                                            <th>Status</th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>
@@ -69,6 +70,27 @@
                                                 <td>{{ $item->detailProgramAspirasi->rw }}</td>
                                                 <td>{{ $item->detailProgramAspirasi->deskripsi }}</td>
                                                 <td>{{ $item->perantara }}</td>
+                                                <td>
+                                                    <form
+                                                        action="{{ url('/admin/program-aspirasi/' . $item->id . '/update-status') }}"
+                                                        method="POST">
+                                                        @csrf
+                                                        @method('PUT')
+                                                        <select name="status"
+                                                            class="custom-select form-control-border border-width-2"
+                                                            onchange="this.form.submit()">
+                                                            <option value="pending"
+                                                                {{ $item->status == 'pending' ? 'selected' : '' }}>Pending
+                                                            </option>
+                                                            <option value="accepted"
+                                                                {{ $item->status == 'accepted' ? 'selected' : '' }}>
+                                                                Accepted</option>
+                                                            <option value="rejected"
+                                                                {{ $item->status == 'rejected' ? 'selected' : '' }}>
+                                                                Rejected</option>
+                                                        </select>
+                                                    </form>
+                                                </td>
                                                 <td>
                                                     <a href="{{ url('/admin/program-aspirasi/' . $item->id . '/edit') }}"
                                                         class="btn btn-warning btn-sm mx-2 my-1">Edit</a>
