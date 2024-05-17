@@ -37,14 +37,14 @@
                 <li class="nav-item">
                     <a href="{{ url('/admin/advokasi-kebijakan') }}"
                         class="nav-link {{ Route::currentRouteName() == 'advokasi-kebijakan' ? 'active' : '' }}">
-                        <i class="far fa-circle nav-icon"></i>
+                        <i class="fas fa-clipboard nav-icon"></i>
                         <p>Advokasi Kebijakaan</p>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a href="{{ url('/admin/program-aspirasi') }}"
                         class="nav-link {{ Route::currentRouteName() == 'program-aspirasi' ? 'active' : '' }}">
-                        <i class="far fa-circle nav-icon"></i>
+                        <i class="fas fa-tasks nav-icon"></i>
                         <p>
                             Program Aspirasi
                         </p>
@@ -53,7 +53,7 @@
                 <li class="nav-item">
                     <a href="{{ url('/admin/program-perawatan') }}"
                         class="nav-link {{ Route::currentRouteName() == 'program-perawatan' ? 'active' : '' }}">
-                        <i class="far fa-circle nav-icon"></i>
+                        <i class="fas fa-tools nav-icon"></i>
                         <p>
                             Program Perawatan
                         </p>
@@ -62,7 +62,7 @@
                 <li class="nav-item">
                     <a href="{{ url('/admin/program-penguatan-sdm') }}"
                         class="nav-link {{ Route::currentRouteName() == 'program-penguatan-sdm' ? 'active' : '' }}">
-                        <i class="far fa-circle nav-icon"></i>
+                        <i class="fas fa-industry nav-icon"></i>
                         <p>
                             Program Penguatan SDM
                         </p>
@@ -71,7 +71,7 @@
                 <li class="nav-item">
                     <a href="{{ url('/admin/program-penelitian') }}"
                         class="nav-link {{ Route::currentRouteName() == 'program-penelitian' ? 'active' : '' }}">
-                        <i class="far fa-circle nav-icon"></i>
+                        <i class="fas fa-file-alt nav-icon"></i>
                         <p>
                             Program Penelitian
                         </p>
@@ -80,7 +80,7 @@
                 <li class="nav-item">
                     <a href="{{ url('/admin/mou') }}"
                         class="nav-link {{ Route::currentRouteName() == 'mou' ? 'active' : '' }}">
-                        <i class="far fa-circle nav-icon"></i>
+                        <i class="fas fa-handshake nav-icon"></i>
                         <p>
                             MOU
                         </p>
@@ -89,7 +89,7 @@
                 <li class="nav-item">
                     <a href="{{ url('/admin/program-wisata-sb') }}"
                         class="nav-link {{ Route::currentRouteName() == 'program-wisata-sb' ? 'active' : '' }}">
-                        <i class="far fa-circle nav-icon"></i>
+                        <i class="fas fa-laptop-house nav-icon"></i>
                         <p>
                             Program Wisata/Studi Banding
                         </p>

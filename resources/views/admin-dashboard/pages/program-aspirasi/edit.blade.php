@@ -43,8 +43,8 @@
                                 <a href="{{ url('/admin/program-aspirasi') }}" class="btn btn-sm btn-primary">Back</a>
                             </div>
                             <div class="form-group">
-                                <label>Title</label>
-                                <input type="text" name="title" class="form-control" placeholder="Masukkan Title"
+                                <label>Judul</label>
+                                <input type="text" name="title" class="form-control" placeholder="Masukkan Judul"
                                     value="{{ $programAspirasi->detailProgramAspirasi->title }}">
                                 @error('title')
                                     <span class="text-danger">{{ $message }}</span>

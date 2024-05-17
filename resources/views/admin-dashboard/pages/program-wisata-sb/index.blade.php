@@ -61,7 +61,7 @@
                                     <tbody>
                                         @foreach ($programWisataSB as $item)
                                             <tr>
-                                                <td>{{ $item->ID }}</td>
+                                                <td>{{ $item->id }}</td>
                                                 <td>{{ $item->judul }}</td>
                                                 <td>{{ $item->deskripsi }}</td>
                                                 <td>{{ $item->jenis }}</td>
