@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\AdvokasiKebijakan;
+use Barryvdh\DomPDF\Facade\Pdf;
 
 class AdvokasiKebijakanController extends Controller
 {
@@ -64,5 +65,17 @@ class AdvokasiKebijakanController extends Controller
         $advokasiKebijakan->delete();
 
         return redirect('admin/advokasi-kebijakan')->with('status', 'Advokasi Kebijakan Berhasil Dihapus');
+    }
+
+    public function print()
+    {
+        $advokasiKebijakan = AdvokasiKebijakan::get();
+        $data = [
+            'date' => date('m/d/Y'),
+            'advokasiKebijakan' => $advokasiKebijakan
+        ];
+
+        $pdf = Pdf::loadView('admin-dashboard.pages.advokasi-kebijakan.print', $data);
+        return $pdf->stream();
     }
 }

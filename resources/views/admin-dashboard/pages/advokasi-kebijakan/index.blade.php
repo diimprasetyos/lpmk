@@ -43,7 +43,8 @@
                                 <div class="mb-2 w-50">
                                     <a href="{{ url('/admin/advokasi-kebijakan/create') }}"
                                         class="btn btn-primary btn-sm btn-flat">Create</a>
-                                    <a href="" class="btn btn-default btn-sm btn-flat">Print</a>
+                                    <a href="{{ url('admin/advokasi-kebijakan/print') }}"
+                                        class="btn btn-default btn-sm btn-flat" target="_blank">Print</a>
                                 </div>
                                 <table class="table table-bordered table-striped">
                                     <thead>
