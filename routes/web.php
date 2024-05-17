@@ -49,7 +49,7 @@ Route::get('/profile/organisasi-kemasyarakatan', function () {
     return view('frontend.pages.Profile.organisasi-kemasyarakatan');
 });
 
-// Informasi Layanan 
+// Informasi Layanan
 Route::get('/layanan/informasi-layanan', function () {
     return view('frontend.pages.Layanan.info-layanan');
 });
@@ -66,7 +66,7 @@ Route::get('/layanan/cek-bantuan', function () {
     return view('frontend.pages.Layanan.bantuan');
 });
 
-// Berita 
+// Berita
 Route::get('/berita', function () {
     return view('frontend.pages.berita');
 });
@@ -75,42 +75,9 @@ Route::get('/berita', function () {
 Route::get('/kontak', function () {
     return view('frontend.pages.kontak');
 });
-
 // End Frontend Routes
 
-// Auth Routes
-
-// Login
-Route::get('/login', function () {
-    return view('auth.pages.login');
-});
-
-// Register
-Route::get('/register', function () {
-    return view('auth.pages.register');
-})->name('register');
-
-// Recover Password
-Route::get('/recover-password', function () {
-    return view('auth.pages.recover-password');
-});
-
-// Forgot Password
-Route::get('/forgot-password', function () {
-    return view('auth.pages.forgot-password');
-});
-
-// End Auth Routes
-
-// Admin Routes
-
-// Admin 
-Route::get('/admin', function () {
-    return view('admin-dashboard.pages.home');
-})->name('admin-home');
-
 // Data
-
 // CRUD - Data Advokasi Kebijakan
 Route::get('admin/advokasi-kebijakan', [App\Http\Controllers\AdvokasiKebijakanController::class, 'index'])->name('advokasi-kebijakan');
 Route::get('admin/advokasi-kebijakan/create', [App\Http\Controllers\AdvokasiKebijakanController::class, 'create'])->name('advokasi-kebijakan');
@@ -174,3 +141,7 @@ Route::get('admin/program-wisata-sb/{id}/delete', [App\Http\Controllers\ProgramW
 Route::get('admin/program-wisata-sb/print', [App\Http\Controllers\ProgramWisataStudiBandingController::class, 'print']);
 
 // End Admin Routes
+
+//route untuk login
+Auth::routes();
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
