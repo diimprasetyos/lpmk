@@ -33,7 +33,7 @@
             </li>
 
             <li class="nav-item col-3 text-center">
-                <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-2">
+                <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-3">
                     <h4>Jumlah Penduduk berdasarkan mata tingkat pendidikan</h4>
                 </a><!-- End tab nav item -->
             </li>
@@ -44,32 +44,32 @@
             <div class="tab-pane active show" id="tab-1">
                 <div class="row">
                     <div class="justify-content-center" data-aos="fade-up" data-aos-delay="100">
-                    <table class="table">
-                                <thead class="thead-dark">
-                                    <tr>
-                                        <th scope="col">No</th>
-                                        <th scope="col">Jenis Kelamin</th>
-                                        <th scope="col">Jumlah</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <th scope="row">1</th>
-                                        <td>Laki-laki</td>
-                                        <td>14.647 Jiwa</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">2</th>
-                                        <td>Perempuan</td>
-                                        <td>15.524 Jiwa</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">3</th>
-                                        <td>Jumlah (Laki-laki & Perempuan)</td>
-                                        <td>30.171 Jiwa, 8.019 KK</td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                        <table class="table">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th scope="col">No</th>
+                                    <th scope="col">Jenis Kelamin</th>
+                                    <th scope="col">Jumlah</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>Laki-laki</td>
+                                    <td>14.647 Jiwa</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td>Perempuan</td>
+                                    <td>15.524 Jiwa</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">3</th>
+                                    <td>Jumlah (Laki-laki & Perempuan)</td>
+                                    <td>30.171 Jiwa, 8.019 KK</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                     <!-- <div class="col-lg-6 order-1 order-lg-2 text-center" data-aos="fade-up" data-aos-delay="200">
                         <img src="/assets/img/features-1.jpg" alt="" class="img-fluid">
@@ -147,23 +147,52 @@
 
             <div class="tab-pane" id="tab-3">
                 <div class="row">
-                    <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0 d-flex flex-column justify-content-center">
-                        <h3>Voluptatibus commodi accusamu</h3>
-                        <ul>
-                            <li><i class="bi bi-check2-all"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                            <li><i class="bi bi-check2-all"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-                            <li><i class="bi bi-check2-all"></i> Provident mollitia neque rerum asperiores dolores quos qui a.
-                                Ipsum neque dolor voluptate nisi sed.</li>
-                        </ul>
-                        <p class="fst-italic">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                            dolore
-                            magna aliqua.
-                        </p>
-                    </div>
-                    <div class="col-lg-6 order-1 order-lg-2 text-center">
-                        <img src="assets/img/features-3.jpg" alt="" class="img-fluid">
-                    </div>
+                    <table class="table">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th scope="col">No</th>
+                                <th scope="col">Jenis Pendidikan</th>
+                                <th scope="col">Jumlah Orang</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Taman Kanak-Kanak</td>
+                                <td>985 orang</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>Sekolah Dasar</td>
+                                <td>3.764 orang</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>SLTP</td>
+                                <td>2.704 orang</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">4</th>
+                                <td>SLTA</td>
+                                <td>3.673 orang</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">5</th>
+                                <td>Akademi (D1-D3)</td>
+                                <td>547 orang</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">6</th>
+                                <td>Sarjana (S1)</td>
+                                <td>346 orang</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">7</th>
+                                <td>Pasca Sarjana (S2 - S3)</td>
+                                <td>16 orang</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div><!-- End tab content item -->
 

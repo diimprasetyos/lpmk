@@ -46,7 +46,7 @@
 
 
                 <div class=" section-header">
-            <h2>Recent Blog Posts</h2>
+            <h2>Berita Terbaru</h2>
             <p>In commodi voluptatem excepturi quaerat nihil error autem voluptate ut et officia consequuntu</p>
         </div>
 
