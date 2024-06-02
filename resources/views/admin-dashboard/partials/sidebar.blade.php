@@ -86,6 +86,16 @@
             </p>
           </a>
         </li>
+        <li class="nav-header">Settings</li>
+        <li class="nav-item">
+          <a href="{{ url('/admin/users') }}" class="nav-link {{ Route::currentRouteName() == 'users' ? 'active' : '' }}">
+            <i class="fas fa-user nav-icon"></i>
+            <p>
+              Users
+            </p>
+          </a>
+        </li>
+
         <li class="nav-header">Danger Zone</li>
         <i class="fas fa-log-out nav-icon"></i>
         <li class="nav-item">

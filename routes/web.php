@@ -97,8 +97,10 @@ Auth::routes();
 Route::group(['middleware' => 'auth'], function () {
 
     // Admin Routes
-    Route::group(['middleware' => 'is_admin'], function () {
+    Route::group(['middleware' => 'checkrole'], function () {
         Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+        Route::get('admin/users', [App\Http\Controllers\UsersController::class, 'index'])->name('users');
 
         Route::get('admin/advokasi-kebijakan', [App\Http\Controllers\AdvokasiKebijakanController::class, 'index'])->name('advokasi-kebijakan');
         Route::get('admin/advokasi-kebijakan/print', [App\Http\Controllers\AdvokasiKebijakanController::class, 'print']);
