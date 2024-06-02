@@ -27,8 +27,8 @@
       @endif
 
       <div class="mb-2 w-50">
-        <a href="{{ url('/admin/program-aspirasi/create') }}" class="btn btn-primary btn-sm btn-flat">Create</a>
-        <a href="{{ url('admin/program-aspirasi/print') }}" class="btn btn-default btn-sm btn-flat" target="_blank">Print</a>
+        <a href="#" class="btn btn-primary btn-sm btn-flat">Create</a>
+        <a href="#" class="btn btn-default btn-sm btn-flat" target="_blank">Print</a>
       </div>
       @include('admin-dashboard.pages.users.table')
     </div>
