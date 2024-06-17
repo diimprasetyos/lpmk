@@ -19,6 +19,7 @@
                 <th>RW</th>
                 <th>Deskripsi</th>
                 <th>Perantara</th>
+                <th>Status</th>
             </tr>
         </thead>
         <tbody>
@@ -31,6 +32,7 @@
                     <td>{{ $item->detailProgramAspirasi->rw }}</td>
                     <td>{{ $item->detailProgramAspirasi->deskripsi }}</td>
                     <td>{{ $item->perantara }}</td>
+                    <td>{{ $item->status }}</td>
                 </tr>
             @endforeach
         </tbody>
