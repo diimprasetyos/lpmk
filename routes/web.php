@@ -97,8 +97,10 @@ Auth::routes();
 Route::group(['middleware' => 'auth'], function () {
 
     // Admin Routes
-    Route::group(['middleware' => 'is_admin'], function () {
+    Route::group(['middleware' => 'checkrole'], function () {
         Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+        Route::get('admin/users', [App\Http\Controllers\UsersController::class, 'index'])->name('users');
 
         Route::get('admin/advokasi-kebijakan', [App\Http\Controllers\AdvokasiKebijakanController::class, 'index'])->name('advokasi-kebijakan');
         Route::get('admin/advokasi-kebijakan/print', [App\Http\Controllers\AdvokasiKebijakanController::class, 'print']);
@@ -114,6 +116,7 @@ Route::group(['middleware' => 'auth'], function () {
         Route::post('admin/program-aspirasi/create', [App\Http\Controllers\ProgramAspirasiController::class, 'store']);
         Route::get('admin/program-aspirasi/{id}/edit', [App\Http\Controllers\ProgramAspirasiController::class, 'edit']);
         Route::put('admin/program-aspirasi/{id}/edit', [App\Http\Controllers\ProgramAspirasiController::class, 'update']);
+        Route::put('admin/program-aspirasi/{id}/update-status', [App\Http\Controllers\ProgramAspirasiController::class, 'updateStatus']);
         Route::get('admin/program-aspirasi/{id}/delete', [App\Http\Controllers\ProgramAspirasiController::class, 'destroy']);
 
         Route::get('admin/program-perawatan', [App\Http\Controllers\ProgramPerawatanController::class, 'index'])->name('program-perawatan');

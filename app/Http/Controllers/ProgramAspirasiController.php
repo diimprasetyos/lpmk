@@ -3,10 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\ProgramAspirasi;
-use Barryvdh\DomPDF\Facade\Pdf;
 use Illuminate\Support\Facades\DB;
+use App\Models\ProgramAspirasi;
 use App\Models\DetailProgramAspirasi;
+use Barryvdh\DomPDF\Facade\Pdf;
 
 class ProgramAspirasiController extends Controller
 {
@@ -77,19 +77,6 @@ class ProgramAspirasiController extends Controller
         }
 
         return redirect('admin/program-aspirasi')->with('status', 'Program Aspirasi Berhasil Diubah');
-    }
-
-    public function updateStatus(Request $request, int $id)
-    {
-        $request->validate([
-            'status' => 'required|in:accepted,rejected,pending',
-        ]);
-
-        $programAspirasi = ProgramAspirasi::findOrFail($id);
-        $programAspirasi->status = $request->input('status');
-        $programAspirasi->save();
-
-        return redirect()->back()->with('status', 'Status berhasil diperbarui');
     }
 
     public function destroy(int $id)
