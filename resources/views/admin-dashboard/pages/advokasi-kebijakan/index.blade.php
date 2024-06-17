@@ -1,44 +1,44 @@
 @extends('admin-dashboard.layouts.master')
 
 @section('title')
-    Data Advokasi Kebijakan
+  Data Advokasi Kebijakan
 @endsection
 
 @section('content')
-    <div class="content">
-        <!-- Content Header (Page header) -->
-        <section class="content-header">
-            <div class="container-fluid">
-                <div class="row mb-2">
-                    <div class="col-sm-6">
-                        <h1>Data Advokasi Kebijakan</h1>
-                    </div>
-                    <div class="col-sm-6">
-                        <ol class="breadcrumb float-sm-right">
-                            <li class="breadcrumb-item"><a href="/admin">Home</a></li>
-                            <li class="breadcrumb-item active">Data Advokasi Kebijakan</li>
-                        </ol>
-                    </div>
-                </div>
-            </div><!-- /.container-fluid -->
-        </section>
+  <div class="content">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1>Data Advokasi Kebijakan</h1>
+          </div>
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="/admin">Home</a></li>
+              <li class="breadcrumb-item active">Data Advokasi Kebijakan</li>
+            </ol>
+          </div>
+        </div>
+      </div><!-- /.container-fluid -->
+    </section>
 
-        <!-- Main content -->
-        <section class="content">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="card">
-                            <div class="card-header">
-                                <h3 class="card-title">Advokasi Kebijakan</h3>
-                            </div>
-                            <!-- /.card-header -->
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title">Advokasi Kebijakan</h3>
+              </div>
+              <!-- /.card-header -->
 
-                            <div class="card-body">
+              <div class="card-body">
 
-                                @if (session('status'))
-                                    <div class="alert alert-success">{{ session('status') }}</div>
-                                @endif
+                @if (session('status'))
+                  <div class="alert alert-success">{{ session('status') }}</div>
+                @endif
 
                                 <div class="mb-2 w-50">
                                     <a href="{{ url('/admin/advokasi-kebijakan/create') }}"
@@ -49,7 +49,7 @@
                                 <table class="table table-bordered table-striped">
                                     <thead>
                                         <tr>
-                                            <th>ID</th>
+                                            <th>No.</th>
                                             <th>Kebijakan Didukung</th>
                                             <th>Strategi Advokasi</th>
                                             <th>Pihak Terkait</th>
@@ -59,7 +59,7 @@
                                     <tbody>
                                         @foreach ($advokasiKebijakan as $item)
                                             <tr>
-                                                <td>{{ $item->id }}</td>
+                                                <td>{{ $loop->iteration }}</td>
                                                 <td>{{ $item->kebijakan_didukung }}</td>
                                                 <td>{{ $item->strategi_advokasi }}</td>
                                                 <td>{{ $item->pihak_terkait }}</td>
@@ -109,11 +109,11 @@
                         <!-- /.card -->
                     </div>
                     <!-- /.col -->
-                </div>
-                <!-- /.row -->
-            </div>
-            <!-- /.container-fluid -->
-        </section>
-        <!-- /.content -->
-    </div>
+        </div>
+        <!-- /.row -->
+      </div>
+      <!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+  </div>
 @endsection

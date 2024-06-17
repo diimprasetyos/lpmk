@@ -116,6 +116,7 @@ Route::group(['middleware' => 'auth'], function () {
         Route::post('admin/program-aspirasi/create', [App\Http\Controllers\ProgramAspirasiController::class, 'store']);
         Route::get('admin/program-aspirasi/{id}/edit', [App\Http\Controllers\ProgramAspirasiController::class, 'edit']);
         Route::put('admin/program-aspirasi/{id}/edit', [App\Http\Controllers\ProgramAspirasiController::class, 'update']);
+        Route::put('admin/program-aspirasi/{id}/update-status', [App\Http\Controllers\ProgramAspirasiController::class, 'updateStatus']);
         Route::get('admin/program-aspirasi/{id}/delete', [App\Http\Controllers\ProgramAspirasiController::class, 'destroy']);
 
         Route::get('admin/program-perawatan', [App\Http\Controllers\ProgramPerawatanController::class, 'index'])->name('program-perawatan');
