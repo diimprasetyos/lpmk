@@ -49,11 +49,8 @@
                                 <table class="table table-bordered table-striped">
                                     <thead>
                                         <tr>
-<<<<<<< HEAD
                                             <th>No</th>
-=======
                                             <th>No.</th>
->>>>>>> b2ac7f02118fc7dd650991766415b5d7367c5591
                                             <th>Judul</th>
                                             <th>Deskripsi</th>
                                             <th>Tanggal</th>
