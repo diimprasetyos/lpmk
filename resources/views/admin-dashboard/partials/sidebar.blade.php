@@ -13,7 +13,7 @@
         <img src="{{ asset('admin-dashboard/dist/img/user2-160x160.jpg') }}" class="img-circle elevation-2" alt="User Image">
       </div>
       <div class="info">
-        <a href="#" class="d-block">Alexander Pierce</a>
+        <a href="#" class="d-block">{{ Auth::user()->name }}</a>
       </div>
     </div>
 
@@ -86,13 +86,24 @@
             </p>
           </a>
         </li>
+        <li class="nav-header">Settings</li>
+        <li class="nav-item">
+          <a href="{{ url('/admin/users') }}" class="nav-link {{ Route::currentRouteName() == 'users' ? 'active' : '' }}">
+            <i class="fas fa-user nav-icon"></i>
+            <p>
+              Users
+            </p>
+          </a>
+        </li>
+
         <li class="nav-header">Danger Zone</li>
         <i class="fas fa-log-out nav-icon"></i>
         <li class="nav-item">
           <a class="nav-link" href="{{ route('logout') }}"
             onclick="event.preventDefault();
                                              document.getElementById('logout-form').submit();">
-            {{ __('Logout') }}
+            <i class="fas fa-door-open nav-icon"> </i>
+            <p>{{ __('Logout') }}</p>
           </a>
           <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
             @csrf
