@@ -11,7 +11,7 @@
     <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
     <nav id="navbar" class="navbar">
       <ul>
-        <li><a href="/">Beranda</a></li>
+        <li><a href="/kecamatan">Beranda</a></li>
         <li class="dropdown"><a href="/profile"><span>Profil</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
           <ul>
             <li><a href="/profile/visi-misi">Visi Misi</a></li>
@@ -45,11 +45,10 @@
             <li><a href="/layanan/informasi-layanan">Layanan Kelurahan</a></li>
             <li><a href="https://sambat.malangkota.go.id/">Pengaduan Online</a></li>
             <li><a href="/layanan/staff">Pejabat & Staff</a></li>
-            <li><a href="/layanan/cek-bantuan">Cek Bantuan</a></li>
           </ul>
         </li>
         <li><a href="/berita">Berita</a></li>
-        <li><a href="/kontak">Kontak & Pengaduan</a></li>
+        <li><a href="/layanan/cek-bantuan">Kontak & Pengaduan</a></li>
         @guest
           @if (Route::has('login'))
             <a href="/login" class="ml-4 btn-login-custom">Login</a>

@@ -50,16 +50,6 @@
             <i class="fab fa-whatsapp"></i> WhatsApp
           </a>
         </div>
-        <div class="col-4">
-          <a href="https://wa.me/1234567891" class="btn btn-success btn-lg btn-block" target="_blank">
-            <i class="fab fa-whatsapp"></i> WhatsApp
-          </a>
-        </div>
-        <div class="col-4">
-          <a href="https://wa.me/1234567892" class="btn btn-success btn-lg btn-block" target="_blank">
-            <i class="fab fa-whatsapp"></i> WhatsApp
-          </a>
-        </div>
       </div>
     </div>
   </div>

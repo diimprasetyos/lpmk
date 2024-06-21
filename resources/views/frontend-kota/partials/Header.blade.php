@@ -13,8 +13,8 @@
             <ul>
                 <li><a href="/">Beranda</a></li>
                 <li><a href="/lpmk-kecamatan">LPMK Kecamatan</a></li>
-                <li><a href="/not-found">Profil</a></li>
-                <li><a href="/not-found">Program</a></li>
+                <!-- <li><a href="/not-found">Profil</a></li>
+                <li><a href="/not-found">Program</a></li> -->
             </ul>
         </nav><!-- .navbar -->
     </div>
