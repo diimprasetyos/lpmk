@@ -5,9 +5,9 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>UpConstruction Bootstrap Template - Index</title>
-    <meta content="" name="description">
-    <meta content="" name="keywords">
+    <title>LPMK Kelurahan Tanjungrejo</title>
+    <meta content="Sistem Informasi LPMK (Lembaga Pemberdayaan Masyarakat Kelurahan) adalah sebuah aplikasi yang dirancang untuk membantu pengelolaan data dan informasi yang berkaitan dengan kegiatan pemberdayaan masyarakat di tingkat kelurahan." name="description">
+    <meta content="lpmk, tanjungrejo, keltanjungrejo, kelurahan tanjungrejo, lpmk tanjungrejo, lpmk tanjungrejo malang, kel tanjungrejo malang, lpmk kelurahan tanjungrejo malang" name="keywords">
 
     <!-- Favicons -->
     <link href="{{ asset('assets/img/favicon.png') }}" rel="icon">
