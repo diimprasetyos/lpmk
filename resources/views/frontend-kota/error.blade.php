@@ -33,7 +33,7 @@
 <div class="container error-container">
   <h1 class="error-heading">404</h1>
   <p class="error-message">Maaf, halaman yang Anda cari tidak ditemukan.</p>
-  <a href="/kota" class="btn btn-primary error-link">Kembali ke Beranda</a>
+  <a href="/" class="btn btn-primary error-link">Kembali ke Beranda</a>
 </div>
 
 <!-- Bootstrap JS (Optional, only if you need Bootstrap JavaScript features) -->

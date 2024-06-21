@@ -49,7 +49,7 @@
                                 <table class="table table-bordered table-striped">
                                     <thead>
                                         <tr>
-                                            <th>ID</th>
+                                            <th>No</th>
                                             <th>Kebijakan Didukung</th>
                                             <th>Strategi Advokasi</th>
                                             <th>Pihak Terkait</th>
@@ -59,7 +59,7 @@
                                     <tbody>
                                         @foreach ($advokasiKebijakan as $item)
                                             <tr>
-                                                <td>{{ $item->id }}</td>
+                                                <td>{{ $loop->iteration }}</td>
                                                 <td>{{ $item->kebijakan_didukung }}</td>
                                                 <td>{{ $item->strategi_advokasi }}</td>
                                                 <td>{{ $item->pihak_terkait }}</td>

@@ -47,7 +47,7 @@
                                 <table class="table table-bordered table-striped">
                                     <thead>
                                         <tr>
-                                            <th>ID</th>
+                                            <th>No</th>
                                             <th>Judul</th>
                                             <th>Nama Mitra</th>
                                             <th>Deskripsi</th>
@@ -58,7 +58,7 @@
                                     <tbody>
                                         @foreach ($MOU as $item)
                                             <tr>
-                                                <td>{{ $item->id }}</td>
+                                                <td>{{ $loop->iteration }}</td>
                                                 <td>{{ $item->judul }}</td>
                                                 <td>{{ $item->nama_mitra }}</td>
                                                 <td>{{ $item->deskripsi }}</td>

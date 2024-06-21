@@ -189,7 +189,7 @@
               <!-- content 1 -->
               <div class="mb-2">
                 <a href="#akte-kelahiran" class="btn p-0 m-0" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="surat-sosial">
-                  <i class="fas fa-plus"></i> Surat Keterangan Kelahiran dan akte kelahiran
+                  <i class="fas fa-plus"></i> Surat Pengantar KK dan KTP
                 </a>
                 <div class="collapse m-4" id="akte-kelahiran">
                   <p><b>Berkas Persyaratan:</b></p>
@@ -212,7 +212,7 @@
               <!-- content 2 -->
               <div class="mb-2">
                 <a href="#akte-kematian" class="btn p-0 m-0" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="surat-sosial">
-                  <i class="fas fa-plus"></i> Surat Keterangan Kematian dan akte Kematian
+                  <i class="fas fa-plus"></i> Surat Pengantar SKCK
                 </a>
                 <div class="collapse m-4" id="akte-kematian">
                   <p><b>Berkas Persyaratan:</b></p>
@@ -234,7 +234,7 @@
               <!-- content 2 -->
               <div class="mb-2">
                 <a href="#surat-nikah" class="btn p-0 m-0" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="surat-sosial">
-                  <i class="fas fa-plus"></i> Surat Pengantar Pernikahan Dan Perceraian
+                  <i class="fas fa-plus"></i> Surat Pengantar Pindah Domisili Penduduk
                 </a>
                 <div class="collapse m-4" id="surat-nikah">
                   <p><b>Berkas Persyaratan:</b></p>
@@ -254,7 +254,7 @@
               <!-- content 2 -->
               <div class="mb-2">
                 <a href="#surat-miskin" class="btn p-0 m-0" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="surat-sosial">
-                  <i class="fas fa-plus"></i> Surat Keterangan Tidak Mampu/ Miskin
+                  <i class="fas fa-plus"></i> Surat Boro Kerja
                 </a>
                 <div class="collapse m-4" id="surat-miskin">
                   <p><b>Berkas Persyaratan:</b></p>
@@ -274,7 +274,7 @@
               <!-- content 2 -->
               <div class="mb-2">
                 <a href="#surat-imigrasi" class="btn p-0 m-0" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="surat-sosial">
-                  <i class="fas fa-plus"></i> Surat Keterangan Keluar Negeri/Imigrasi
+                  <i class="fas fa-plus"></i> Surat Keterangan Domisili Penduduk
                 </a>
                 <div class="collapse m-4" id="surat-imigrasi">
                   <p><b>Berkas Persyaratan:</b></p>
@@ -294,7 +294,7 @@
               <!-- content 2 -->
               <div class="mb-2">
                 <a href="#surat-sosial" class="btn p-0 m-0" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="surat-sosial">
-                  <i class="fas fa-plus"></i> Surat-surat yang berkaitan dengan sosial dan kesejateraan masyarakat
+                  <i class="fas fa-plus"></i> Surat Model "C" dengan administrasi kependudukan
                 </a>
                 <div class="collapse m-4" id="surat-sosial">
                   <p><b>Berkas Persyaratan:</b></p>
@@ -323,7 +323,7 @@
               <!-- content 1 -->
               <div class="mb-2">
                 <a href="#akte-kelahiran" class="btn p-0 m-0" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="surat-sosial">
-                  <i class="fas fa-plus"></i> Surat Keterangan Kelahiran dan akte kelahiran
+                  <i class="fas fa-plus"></i> Surat Ijin Keramaian
                 </a>
                 <div class="collapse m-4" id="akte-kelahiran">
                   <p><b>Berkas Persyaratan:</b></p>
@@ -346,7 +346,7 @@
               <!-- content 2 -->
               <div class="mb-2">
                 <a href="#akte-kematian" class="btn p-0 m-0" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="surat-sosial">
-                  <i class="fas fa-plus"></i> Surat Keterangan Kematian dan akte Kematian
+                  <i class="fas fa-plus"></i> Surat Domisili Usaha
                 </a>
                 <div class="collapse m-4" id="akte-kematian">
                   <p><b>Berkas Persyaratan:</b></p>
@@ -368,7 +368,7 @@
               <!-- content 2 -->
               <div class="mb-2">
                 <a href="#surat-nikah" class="btn p-0 m-0" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="surat-sosial">
-                  <i class="fas fa-plus"></i> Surat Pengantar Pernikahan Dan Perceraian
+                  <i class="fas fa-plus"></i> Surat Keterangan Waris/Akte Jual Beli/Akte Hibah Tanah dan Bangunan
                 </a>
                 <div class="collapse m-4" id="surat-nikah">
                   <p><b>Berkas Persyaratan:</b></p>
@@ -388,7 +388,7 @@
               <!-- content 2 -->
               <div class="mb-2">
                 <a href="#surat-miskin" class="btn p-0 m-0" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="surat-sosial">
-                  <i class="fas fa-plus"></i> Surat Keterangan Tidak Mampu/ Miskin
+                  <i class="fas fa-plus"></i> Surat Keterangan Ijin Usaha (HO)/IMB
                 </a>
                 <div class="collapse m-4" id="surat-miskin">
                   <p><b>Berkas Persyaratan:</b></p>
@@ -408,7 +408,7 @@
               <!-- content 2 -->
               <div class="mb-2">
                 <a href="#surat-imigrasi" class="btn p-0 m-0" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="surat-sosial">
-                  <i class="fas fa-plus"></i> Surat Keterangan Keluar Negeri/Imigrasi
+                  <i class="fas fa-plus"></i> Surat Keterangan Pajak Bumi dan Bangunan
                 </a>
                 <div class="collapse m-4" id="surat-imigrasi">
                   <p><b>Berkas Persyaratan:</b></p>
@@ -428,7 +428,7 @@
               <!-- content 2 -->
               <div class="mb-2">
                 <a href="#surat-sosial" class="btn p-0 m-0" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="surat-sosial">
-                  <i class="fas fa-plus"></i> Surat-surat yang berkaitan dengan sosial dan kesejateraan masyarakat
+                  <i class="fas fa-plus"></i> Surat-surat yang berkaitan dengan Ketertiban dan Keamanan Lingkungan
                 </a>
                 <div class="collapse m-4" id="surat-sosial">
                   <p><b>Berkas Persyaratan:</b></p>
@@ -457,7 +457,7 @@
               <!-- content 1 -->
               <div class="mb-2">
                 <a href="#akte-kelahiran" class="btn p-0 m-0" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="surat-sosial">
-                  <i class="fas fa-plus"></i> Surat Keterangan Kelahiran dan akte kelahiran
+                  <i class="fas fa-plus"></i> Surat Pengantar Kredit Usaha
                 </a>
                 <div class="collapse m-4" id="akte-kelahiran">
                   <p><b>Berkas Persyaratan:</b></p>
@@ -476,88 +476,6 @@
                 </div>
               </div>
               <!-- end content 1 -->
-
-              <!-- content 2 -->
-              <div class="mb-2">
-                <a href="#akte-kematian" class="btn p-0 m-0" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="surat-sosial">
-                  <i class="fas fa-plus"></i> Surat Keterangan Kematian dan akte Kematian
-                </a>
-                <div class="collapse m-4" id="akte-kematian">
-                  <p><b>Berkas Persyaratan:</b></p>
-                  <ol>
-                    <li>Surat Keterangan/ Pengantar dari RT & RW</li>
-                    <li>Foto copy KK & KTP Almarhum</li>
-                    <li>Foto copy KK & KTP Pelapor</li>
-                    <li>Fotocopi Surat Kematian dari Rumah Sakit jika meninggal di RS</li>
-                  </ol>
-                  <div>
-                    <a href="http://keltanjungrejo.malangkota.go.id/wp-content/uploads/sites/61/2016/06/pencatatan-kematian_2.pdf" class="btn btn-primary m-4" target="_blank">
-                      Unduh Formulir
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <!-- end content 2 -->
-
-              <!-- content 2 -->
-              <div class="mb-2">
-                <a href="#surat-nikah" class="btn p-0 m-0" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="surat-sosial">
-                  <i class="fas fa-plus"></i> Surat Pengantar Pernikahan Dan Perceraian
-                </a>
-                <div class="collapse m-4" id="surat-nikah">
-                  <p><b>Berkas Persyaratan:</b></p>
-                  <ol>
-                    <li>...</li>
-
-                  </ol>
-                  <div>
-                    <a href="http://keltanjungrejo.malangkota.go.id/wp-content/uploads/sites/61/2016/06/pencatatan-kematian_2.pdf" class="btn btn-primary m-4" target="_blank">
-                      Unduh Formulir
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <!-- end content 2 -->
-
-              <!-- content 2 -->
-              <div class="mb-2">
-                <a href="#surat-miskin" class="btn p-0 m-0" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="surat-sosial">
-                  <i class="fas fa-plus"></i> Surat Keterangan Tidak Mampu/ Miskin
-                </a>
-                <div class="collapse m-4" id="surat-miskin">
-                  <p><b>Berkas Persyaratan:</b></p>
-                  <ol>
-                    <li>...</li>
-
-                  </ol>
-                  <div>
-                    <a href="http://keltanjungrejo.malangkota.go.id/wp-content/uploads/sites/61/2016/06/pencatatan-kematian_2.pdf" class="btn btn-primary m-4" target="_blank">
-                      Unduh Formulir
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <!-- end content 2 -->
-
-              <!-- content 2 -->
-              <div class="mb-2">
-                <a href="#surat-imigrasi" class="btn p-0 m-0" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="surat-sosial">
-                  <i class="fas fa-plus"></i> Surat Keterangan Keluar Negeri/Imigrasi
-                </a>
-                <div class="collapse m-4" id="surat-imigrasi">
-                  <p><b>Berkas Persyaratan:</b></p>
-                  <ol>
-                    <li>...</li>
-
-                  </ol>
-                  <div>
-                    <a href="http://keltanjungrejo.malangkota.go.id/wp-content/uploads/sites/61/2016/06/pencatatan-kematian_2.pdf" class="btn btn-primary m-4" target="_blank">
-                      Unduh Formulir
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <!-- end content 2 -->
 
               <!-- content 2 -->
               <div class="mb-2">

@@ -19,9 +19,8 @@
     <div class="container" data-aos="fade-up">
 
         <div class="section-header">
-            <h2>Our Team</h2>
-            <p>Aperiam dolorum et et wuia molestias qui eveniet numquam nihil porro incidunt dolores placeat sunt id nobis
-                omnis tiledo stran delop</p>
+            <h2>Staff LPMK</h2>
+            <p>Daftar Staff LPMK Tanjungrejo</p>
         </div>
 
         <div class="row gy-5">

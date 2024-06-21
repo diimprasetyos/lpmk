@@ -49,7 +49,7 @@
                                 <table class="table table-bordered table-striped">
                                     <thead>
                                         <tr>
-                                            <th>ID</th>
+                                            <th>No</th>
                                             <th>Judul</th>
                                             <th>Deskripsi</th>
                                             <th>Tanggal</th>
@@ -60,7 +60,7 @@
                                     <tbody>
                                         @foreach ($programPenelitian as $item)
                                             <tr>
-                                                <td>{{ $item->id }}</td>
+                                                <td>{{ $loop->iteration }}</td>
                                                 <td>{{ $item->judul }}</td>
                                                 <td>{{ $item->deskripsi }}</td>
                                                 <td style="width: 10%;">{{ $item->tanggal }}</td>

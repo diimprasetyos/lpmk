@@ -8,8 +8,8 @@
             <div class="row justify-content-center">
                 <div class="col-lg-6 text-center">
                     <h2 data-aos="fade-down">Selamat Datang di <br><span>LPMK Kota Malang</span></h2>
-                    <p data-aos="fade-up">Lembaga Pemberdayaan Masyarakat Kelurahan (LPMK) adalah lembaga atau wadah yang dibentuk berdasarkan prakarsa masyarakat yang difasilitasi pemerintah melalui musyarawah mufakat sebagai mitra kelurahan dalam menampung dan mewujudkan aspirasi serta kebutuhan masyarakat di bidang pembangunan.</p>
-                    <a data-aos="fade-up" data-aos-delay="200" href="#get-started" class="btn-get-started">Get Started</a>
+                    <p data-aos="fade-up">Website Lembaga Pemberdayaan Masyarakat Kelurahan (LPMK) Kota Malang</p>
+                    <a data-aos="fade-up" data-aos-delay="200" href="/lpmk-kecamatan" class="btn-get-started">Cek LPMK</a>
                 </div>
             </div>
         </div>
@@ -146,7 +146,7 @@
 
 
                 <div class=" section-header">
-            <h2>UMKM LPMK Kota Malang</h2>
+            <h2>UMKM</h2>
             <p>Daftar Data UMKM LPMK Kota Malang</p>
         </div>
 
