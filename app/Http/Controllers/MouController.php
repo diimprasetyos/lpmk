@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Models\Mou;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
 
 class MouController extends Controller
@@ -46,7 +46,7 @@ class MouController extends Controller
             'dokumen' => $path.$filename
         ]);
 
-        return redirect('admin/mou')->with('status', 'MOU Berhasil Ditambahkan');
+        return redirect('admin/mou')->with('status', ['message' => 'MOU Berhasil Ditambahkan', 'type' => 'success']);
     }
 
     public function edit(int $id)
@@ -88,7 +88,7 @@ class MouController extends Controller
             'dokumen' => $path.$filename
         ]);
 
-        return redirect('admin/mou')->with('status', 'MOU Berhasil Diubah');
+        return redirect('admin/mou')->with('status', ['message' => 'MOU Berhasil Diubah', 'type' => 'info']);
     }
 
     public function destroy(int $id)
@@ -101,6 +101,6 @@ class MouController extends Controller
 
         $MOU->delete();
 
-        return redirect('admin/mou')->with('status', 'MOU Berhasil Dihapus');
+        return redirect('admin/mou')->with('status', ['message' => 'MOU Berhasil Dihapus', 'type' => 'danger']);
     }
 }

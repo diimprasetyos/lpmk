@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Barryvdh\DomPDF\Facade\Pdf;
 use App\Models\ProgramPenelitian;
 use Illuminate\Support\Facades\File;
-use Barryvdh\DomPDF\Facade\Pdf;
 
 class ProgramPenelitianController extends Controller
 {
@@ -47,7 +47,7 @@ class ProgramPenelitianController extends Controller
             'dokumentasi' => $path.$filename
         ]);
 
-        return redirect('admin/program-penelitian')->with('status', 'Program Penelitian Berhasil Ditambahkan');
+        return redirect('admin/program-penelitian')->with('status', ['message' => 'Program Penelitian Berhasil Ditambahkan', 'type' => 'success']);
     }
 
     public function edit(int $id)
@@ -89,7 +89,7 @@ class ProgramPenelitianController extends Controller
             'dokumentasi' => $path.$filename
         ]);
 
-        return redirect('admin/program-penelitian')->with('status', 'Program Penelitian Berhasil Diubah');
+        return redirect('admin/program-penelitian')->with('status', ['message' => 'Program Penelitian Berhasil Diubah', 'type' => 'info']);
     }
 
     public function destroy(int $id)
@@ -102,7 +102,7 @@ class ProgramPenelitianController extends Controller
 
         $programPenelitian->delete();
 
-        return redirect('admin/program-penelitian')->with('status', 'Program Penelitian Berhasil Dihapus');
+        return redirect('admin/program-penelitian')->with('status', ['message' => 'Program Penelitian Berhasil Dihapus', 'type' => 'danger']);
     }
 
     public function print()

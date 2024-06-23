@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Barryvdh\DomPDF\Facade\Pdf;
 use App\Models\ProgramPerawatan;
 use Illuminate\Support\Facades\File;
-use Barryvdh\DomPDF\Facade\Pdf;
 
 class ProgramPerawatanController extends Controller
 {
@@ -47,7 +47,7 @@ class ProgramPerawatanController extends Controller
             'dokumentasi' => $path.$filename
         ]);
 
-        return redirect('admin/program-perawatan')->with('status', 'Program Perawatan Berhasil Ditambahkan');
+        return redirect('admin/program-perawatan')->with('status', ['message' => 'Program Perawatan Berhasil Ditambahkan', 'type' => 'success']);
     }
 
     public function edit(int $id)
@@ -89,7 +89,7 @@ class ProgramPerawatanController extends Controller
             'dokumentasi' => $path.$filename
         ]);
 
-        return redirect('admin/program-perawatan')->with('status', 'Program Perawatan Berhasil Diubah');
+        return redirect('admin/program-perawatan')->with('status', ['message' => 'Program Perawatan Berhasil Diubah', 'type' => 'info']);
     }
 
     public function destroy(int $id)
@@ -102,7 +102,7 @@ class ProgramPerawatanController extends Controller
 
         $programPerawatan->delete();
 
-        return redirect('admin/program-perawatan')->with('status', 'Program Perawatan Berhasil Dihapus');
+        return redirect('admin/program-perawatan')->with('status', ['message' => 'Program Perawatan Berhasil Dihapus', 'type' => 'danger']);
     }
 
     public function print()

@@ -49,12 +49,15 @@
                                     placeholder="Masukkan Judul Program Wisata/Studi Banding"
                                     value="{{ $programWisataSB->judul }}">
                                 @error('judul')
-                                    <span class="text-danger">{{ $message }}</span>
+                                    <span class="text-danger">Data judul harus diisi.</span>
                                 @enderror
                             </div>
                             <div class="form-group">
                                 <label>Deskripsi</label>
                                 <textarea name="deskripsi" class="form-control" rows="3" placeholder="Masukkan Deskripsi">{{ $programWisataSB->deskripsi }}</textarea>
+                                @error('deskripsi')
+                                    <span class="text-danger">Deskripsi harus diisi.</span>
+                                @enderror
                             </div>
                             <div class="form-group">
                                 <label>Jenis</label>
@@ -62,7 +65,7 @@
                                     placeholder="Masukkan Jenis Program Wisata/Studi Banding"
                                     value="{{ $programWisataSB->jenis }}">
                                 @error('jenis')
-                                    <span class="text-danger">{{ $message }}</span>
+                                    <span class="text-danger">Data jenis program wisata/studi banding harus diisi.</span>
                                 @enderror
                             </div>
                             <div class="form-group">
@@ -70,14 +73,14 @@
                                 <input type="date" name="tanggal" class="form-control"
                                     value="{{ $programWisataSB->tanggal }}">
                                 @error('tanggal')
-                                    <span class="text-danger">{{ $message }}</span>
+                                    <span class="text-danger">Data tanggal perlu ditentukan.</span>
                                 @enderror
                             </div>
                             <div class="form-group">
                                 <label>Dokumentasi</label><br>
                                 <input type="file" name="dokumentasi" id="formFile">
                                 @error('dokumentasi')
-                                    <br><span class="text-danger">{{ $message }}</span>
+                                    <br><span class="text-danger">Dokumentasi perlu ditentukan.</span>
                                 @enderror
                             </div>
                         </div>

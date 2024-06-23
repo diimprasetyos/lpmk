@@ -23,28 +23,37 @@ class ProgramAspirasiController extends Controller
 
     public function store(Request $data)
     {
+        $validatedData = $data->validate([
+            'title' => 'required|string|max:255',
+            'prioritas' => 'required|string|max:255',
+            'rt' => 'required|string|max:255',
+            'rw' => 'required|string|max:255',
+            'deskripsi' => 'required|string',
+            'perantara' => 'required|string|max:255',
+        ]);
+        
         DB::beginTransaction();
         try {
             $detail = new DetailProgramAspirasi();
-            $detail->title = $data['title'];
-            $detail->prioritas = $data['prioritas'];
-            $detail->rt = $data['rt'];
-            $detail->rw = $data['rw'];
-            $detail->deskripsi = $data['deskripsi'];
+            $detail->title = $validatedData['title'];
+            $detail->prioritas = $validatedData['prioritas'];
+            $detail->rt = $validatedData['rt'];
+            $detail->rw = $validatedData['rw'];
+            $detail->deskripsi = $validatedData['deskripsi'];
             $detail->save();
 
             $pa = new ProgramAspirasi();
-            $pa->perantara = $data['perantara'];
+            $pa->perantara = $validatedData['perantara'];
             $pa->status = 'Pending';
             $pa->detail_program_aspirasi_id = $detail->id;
             $pa->save();
             DB::commit();
         } catch (\Throwable $th) {
             DB::rollBack();
-            throw $th->getMessage();
+            throw back()->withErrors(['msg' => 'Terjadi kesalahan: ' . $th->getMessage()]);
         }
 
-        return redirect('admin/program-aspirasi')->with('status', 'Program Aspirasi Berhasil Ditambahkan');
+        return redirect('admin/program-aspirasi')->with('status', ['message' => 'Program Aspirasi Berhasil Ditambahkan', 'type' => 'success']);
     }
 
     public function edit(int $id)
@@ -55,28 +64,38 @@ class ProgramAspirasiController extends Controller
 
     public function update(Request $data, int $id)
     {
+        $validatedData = $data->validate([
+            'title' => 'required|string|max:255',
+            'prioritas' => 'required|string|max:255',
+            'rt' => 'required|string|max:255',
+            'rw' => 'required|string|max:255',
+            'deskripsi' => 'required|string',
+            'perantara' => 'required|string|max:255',
+            'status' => 'required|string|max:255',
+        ]);
+
         DB::beginTransaction();
         try {
             $detail = DetailProgramAspirasi::findOrFail($id);
-            $detail->title = $data['title'];
-            $detail->prioritas = $data['prioritas'];
-            $detail->rt = $data['rt'];
-            $detail->rw = $data['rw'];
-            $detail->deskripsi = $data['deskripsi'];
+            $detail->title = $validatedData['title'];
+            $detail->prioritas = $validatedData['prioritas'];
+            $detail->rt = $validatedData['rt'];
+            $detail->rw = $validatedData['rw'];
+            $detail->deskripsi = $validatedData['deskripsi'];
             $detail->update();
 
             $pa = ProgramAspirasi::findOrFail($id);
-            $pa->perantara = $data['perantara'];
-            $pa->status = 'Pending';
+            $pa->perantara = $validatedData['perantara'];
+            $pa->status = $validatedData['status'];
             $pa->detail_program_aspirasi_id = $detail->id;
             $pa->update();
             DB::commit();
         } catch (\Throwable $th) {
             DB::rollBack();
-            throw $th->getMessage();
+            throw back()->withErrors(['msg' => 'Terjadi kesalahan: ' . $th->getMessage()]);
         }
 
-        return redirect('admin/program-aspirasi')->with('status', 'Program Aspirasi Berhasil Diubah');
+        return redirect('admin/program-aspirasi')->with('status', ['message' => 'Program Aspirasi Berhasil Diubah', 'type' => 'info']);
     }
 
     public function updateStatus(Request $request, int $id)
@@ -89,7 +108,7 @@ class ProgramAspirasiController extends Controller
         $programAspirasi->status = $request->input('status');
         $programAspirasi->save();
 
-        return redirect()->back()->with('status', 'Status berhasil diperbarui');
+        return redirect()->back()->with('status', ['message' => 'Status berhasil diperbarui', 'type' => 'info']);
     }
 
     public function destroy(int $id)
@@ -99,7 +118,7 @@ class ProgramAspirasiController extends Controller
         $detail = DetailProgramAspirasi::findOrFail($id);
         $detail->delete();
 
-        return redirect('admin/program-aspirasi')->with('status', 'Program Aspirasi Berhasil Dihapus');
+        return redirect('admin/program-aspirasi')->with('status', ['message' => 'Program Aspirasi Berhasil Dihapus', 'type' => 'danger']);
     }
 
     public function print()

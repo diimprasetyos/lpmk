@@ -50,16 +50,22 @@
                                     placeholder="Masukkan Kebijakan yang Didukung"
                                     value="{{ $advokasiKebijakan->kebijakan_didukung }}">
                                 @error('kebijakan_didukung')
-                                    <span class="text-danger">{{ $message }}</span>
+                                    <span class="text-danger">Data kebijakan yang didukung harus diisi.</span>
                                 @enderror
                             </div>
                             <div class="form-group">
                                 <label>Strategi Advokasi</label>
                                 <textarea name="strategi_advokasi" class="form-control" rows="3" placeholder="Masukkan Strategi Advokasi">{{ $advokasiKebijakan->strategi_advokasi }}</textarea>
+                                @error('strategi_advokasi')
+                                    <span class="text-danger">Data strategi advokasi harus diisi.</span>
+                                @enderror
                             </div>
                             <div class="form-group">
                                 <label>Pihak Terkait</label>
                                 <textarea name="pihak_terkait" class="form-control" rows="3" placeholder="Masukkan Pihak Terkait">{{ $advokasiKebijakan->pihak_terkait }}</textarea>
+                                @error('pihak_terkait')
+                                    <span class="text-danger">Data pihak terkait harus diisi.</span>
+                                @enderror
                             </div>
                         </div>
                         <!-- /.card-body -->

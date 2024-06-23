@@ -45,7 +45,7 @@
                                 <input type="text" name="title" class="form-control" placeholder="Masukkan Judul"
                                     value="{{ old('title') }}">
                                 @error('title')
-                                    <span class="text-danger">{{ $message }}</span>
+                                    <span class="text-danger">Data judul harus diisi.</span>
                                 @enderror
                             </div>
                             <div class="form-group">
@@ -61,7 +61,7 @@
                                 <input type="text" name="rt" class="form-control" placeholder="Masukkan RT"
                                     value="{{ old('rt') }}">
                                 @error('rt')
-                                    <span class="text-danger">{{ $message }}</span>
+                                    <span class="text-danger">Data RT harus diisi.</span>
                                 @enderror
                             </div>
                             <div class="form-group">
@@ -69,19 +69,22 @@
                                 <input type="text" name="rw" class="form-control" placeholder="Masukkan RW"
                                     value="{{ old('rw') }}">
                                 @error('rw')
-                                    <span class="text-danger">{{ $message }}</span>
+                                    <span class="text-danger">Data RW harus diisi.</span>
                                 @enderror
                             </div>
                             <div class="form-group">
                                 <label>Deskripsi</label>
                                 <textarea name="deskripsi" class="form-control" rows="3" placeholder="Masukkan Deskripsi">{{ old('deskripsi') }}</textarea>
+                                @error('deskripsi')
+                                    <span class="text-danger">Deskripsi harus diisi.</span>
+                                @enderror
                             </div>
                             <div class="form-group">
                                 <label>Perantara</label>
                                 <input type="text" name="perantara" class="form-control" placeholder="Masukkan Perantara"
                                     value="{{ old('perantara') }}">
                                 @error('perantara')
-                                    <span class="text-danger">{{ $message }}</span>
+                                    <span class="text-danger">Data perantara harus diisi.</span>
                                 @enderror
                             </div>
                         </div>

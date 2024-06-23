@@ -47,7 +47,7 @@
                                 <input type="text" name="title" class="form-control" placeholder="Masukkan Judul"
                                     value="{{ $programAspirasi->detailProgramAspirasi->title }}">
                                 @error('title')
-                                    <span class="text-danger">{{ $message }}</span>
+                                    <span class="text-danger">Data judul harus diisi.</span>
                                 @enderror
                             </div>
                             <div class="form-group">
@@ -63,7 +63,7 @@
                                 <input type="text" name="rt" class="form-control" placeholder="Masukkan RT"
                                     value="{{ $programAspirasi->detailProgramAspirasi->rt }}">
                                 @error('rt')
-                                    <span class="text-danger">{{ $message }}</span>
+                                    <span class="text-danger">Data RT harus diisi.</span>
                                 @enderror
                             </div>
                             <div class="form-group">
@@ -71,20 +71,35 @@
                                 <input type="text" name="rw" class="form-control" placeholder="Masukkan RW"
                                     value="{{ $programAspirasi->detailProgramAspirasi->rw }}">
                                 @error('rw')
-                                    <span class="text-danger">{{ $message }}</span>
+                                    <span class="text-danger">Data RW harus diisi.</span>
                                 @enderror
                             </div>
                             <div class="form-group">
                                 <label>Deskripsi</label>
                                 <textarea name="deskripsi" class="form-control" rows="3" placeholder="Masukkan Deskripsi">{{ $programAspirasi->detailProgramAspirasi->deskripsi }}</textarea>
+                                @error('deskripsi')
+                                    <span class="text-danger">Deskripsi harus diisi.</span>
+                                @enderror
                             </div>
                             <div class="form-group">
                                 <label>Perantara</label>
                                 <input type="text" name="perantara" class="form-control" placeholder="Masukkan Perantara"
                                     value="{{ $programAspirasi->perantara }}">
                                 @error('perantara')
-                                    <span class="text-danger">{{ $message }}</span>
+                                    <span class="text-danger">Data perantara harus diisi.</span>
                                 @enderror
+                            </div>
+                            <div class="form-group">
+                                <label>Status</label>
+                                <select name="status" class="custom-select form-control-border border-width-2">
+                                    <option value="pending" {{ $programAspirasi->status == 'pending' ? 'selected' : '' }}>
+                                        Pending
+                                    </option>
+                                    <option value="accepted" {{ $programAspirasi->status == 'accepted' ? 'selected' : '' }}>
+                                        Accepted</option>
+                                    <option value="rejected" {{ $programAspirasi->status == 'rejected' ? 'selected' : '' }}>
+                                        Rejected</option>
+                                </select>
                             </div>
                         </div>
                         <!-- /.card-body -->

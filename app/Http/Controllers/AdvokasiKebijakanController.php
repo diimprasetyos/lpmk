@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\AdvokasiKebijakan;
 use Barryvdh\DomPDF\Facade\Pdf;
+use App\Models\AdvokasiKebijakan;
 
 class AdvokasiKebijakanController extends Controller
 {
@@ -33,7 +33,7 @@ class AdvokasiKebijakanController extends Controller
             'pihak_terkait' => $request->pihak_terkait,
         ]);
 
-        return redirect('admin/advokasi-kebijakan')->with('status', 'Advokasi Kebijakan Berhasil Ditambahkan');
+        return redirect('admin/advokasi-kebijakan')->with('status', ['message' => 'Advokasi Kebijakan Berhasil Ditambahkan', 'type' => 'success']);
     }
 
     public function edit(int $id)
@@ -56,7 +56,7 @@ class AdvokasiKebijakanController extends Controller
             'pihak_terkait' => $request->pihak_terkait,
         ]);
 
-        return redirect('admin/advokasi-kebijakan')->with('status', 'Advokasi Kebijakan Berhasil Diubah');
+        return redirect('admin/advokasi-kebijakan')->with('status', ['message' => 'Advokasi Kebijakan Berhasil Diubah', 'type' => 'info']);
     }
 
     public function destroy(int $id)
@@ -64,7 +64,7 @@ class AdvokasiKebijakanController extends Controller
         $advokasiKebijakan = AdvokasiKebijakan::findOrFail($id);
         $advokasiKebijakan->delete();
 
-        return redirect('admin/advokasi-kebijakan')->with('status', 'Advokasi Kebijakan Berhasil Dihapus');
+        return redirect('admin/advokasi-kebijakan')->with('status', ['message' => 'Advokasi Kebijakan Berhasil Dihapus', 'type' => 'danger']);
     }
 
     public function print()

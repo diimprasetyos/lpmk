@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\ProgramWisataStudiBanding;
-use Illuminate\Support\Facades\File;
 use Barryvdh\DomPDF\Facade\Pdf;
+use Illuminate\Support\Facades\File;
+use App\Models\ProgramWisataStudiBanding;
 
 class ProgramWisataStudiBandingController extends Controller
 {
@@ -49,7 +49,7 @@ class ProgramWisataStudiBandingController extends Controller
             'dokumentasi' => $path.$filename
         ]);
 
-        return redirect('admin/program-wisata-sb')->with('status', 'Program Wisaata/Studi Banding Berhasil Ditambahkan');
+        return redirect('admin/program-wisata-sb')->with('status', ['message' => 'Program Wisata/Studi Banding Berhasil Ditambahkan', 'type' => 'success']);
     }
 
     public function edit(int $id)
@@ -93,7 +93,7 @@ class ProgramWisataStudiBandingController extends Controller
             'dokumentasi' => $path.$filename
         ]);
 
-        return redirect('admin/program-wisata-sb')->with('status', 'Program Wisaata/Studi Banding Berhasil Diubah');
+        return redirect('admin/program-wisata-sb')->with('status', ['message' => 'Program Wisata/Studi Banding Berhasil Diubah', 'type' => 'info']);
     }
 
     public function destroy(int $id)
@@ -106,7 +106,7 @@ class ProgramWisataStudiBandingController extends Controller
 
         $programWisataSB->delete();
 
-        return redirect('admin/program-wisata-sb')->with('status', 'Program Wisaata/Studi Banding Berhasil Dihapus');
+        return redirect('admin/program-wisata-sb')->with('status', ['message' => 'Program Wisata/Studi Banding Berhasil Dihapus', 'type' => 'danger']);
     }
 
     public function print()

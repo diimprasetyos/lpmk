@@ -46,7 +46,7 @@
                                 <input type="text" name="judul" class="form-control" placeholder="Masukkan Judul MOU"
                                     value="{{ old('judul') }}">
                                 @error('judul')
-                                    <span class="text-danger">{{ $message }}</span>
+                                    <span class="text-danger">Data judul harus diisi.</span>
                                 @enderror
                             </div>
                             <div class="form-group">
@@ -54,18 +54,21 @@
                                 <input type="text" name="nama_mitra" class="form-control"
                                     placeholder="Masukkan Nama Mitra MOU" value="{{ old('nama_mitra') }}">
                                 @error('nama_mitra')
-                                    <span class="text-danger">{{ $message }}</span>
+                                    <span class="text-danger">Data nama mitra harus diisi.</span>
                                 @enderror
                             </div>
                             <div class="form-group">
                                 <label>Deskripsi</label>
                                 <textarea name="deskripsi" class="form-control" rows="3" placeholder="Masukkan Deskripsi">{{ old('deskripsi') }}</textarea>
+                                @error('deskripsi')
+                                    <span class="text-danger">Deskripsi harus diisi.</span>
+                                @enderror
                             </div>
                             <div class="form-group">
                                 <label>File</label><br>
                                 <input type="file" name="dokumen" id="formFile">
                                 @error('dokumen')
-                                    <br><span class="text-danger">{{ $message }}</span>
+                                    <br><span class="text-danger">File perlu ditentukan.</span>
                                 @enderror
                             </div>
                         </div>

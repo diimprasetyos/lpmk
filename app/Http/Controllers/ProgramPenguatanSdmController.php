@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Barryvdh\DomPDF\Facade\Pdf;
 use App\Models\ProgramPenguatanSdm;
 use Illuminate\Support\Facades\File;
-use Barryvdh\DomPDF\Facade\Pdf;
 
 class ProgramPenguatanSdmController extends Controller
 {
@@ -47,7 +47,7 @@ class ProgramPenguatanSdmController extends Controller
             'dokumentasi' => $path.$filename
         ]);
 
-        return redirect('admin/program-penguatan-sdm')->with('status', 'Program Penguatan SDM Berhasil Ditambahkan');
+        return redirect('admin/program-penguatan-sdm')->with('status', ['message' => 'Program Penguatan SDM Berhasil Ditambahkan', 'type' => 'success']);
     }
 
     public function edit(int $id)
@@ -89,7 +89,7 @@ class ProgramPenguatanSdmController extends Controller
             'dokumentasi' => $path.$filename
         ]);
 
-        return redirect('admin/program-penguatan-sdm')->with('status', 'Program Penguatan SDM Berhasil Diubah');
+        return redirect('admin/program-penguatan-sdm')->with('status', ['message' => 'Program Penguatan SDM Berhasil Diubah', 'type' => 'info']);
     }
 
     public function destroy(int $id)
@@ -102,7 +102,7 @@ class ProgramPenguatanSdmController extends Controller
 
         $programPenguatanSDM->delete();
 
-        return redirect('admin/program-penguatan-sdm')->with('status', 'Program Penguatan SDM Berhasil Dihapus');
+        return redirect('admin/program-penguatan-sdm')->with('status', ['message' => 'Program Penguatan SDM Berhasil Dihapus', 'type' => 'danger']);
     }
 
     public function print()
